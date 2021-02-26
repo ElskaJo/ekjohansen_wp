@@ -1,0 +1,49 @@
+// for each retro post. not sold on this layout still
+
+.retro__single-pg {
+    position: relative;
+    background: var(--bg__white-04);
+    // put in different layouts for different viewports.
+    .retro-grid {
+        @media screen and (min-width: 800px) {
+            display: grid; 
+            grid-template-columns: repeat(5, 1fr); 
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "header header header header header"
+            "retro-img retro-img retro-img story story"
+            "retro-img retro-img retro-img highlights highlights";
+        }
+    }
+    
+
+    // the bit that holds the image of said tragic former design. 
+    header {
+        grid-area: header;
+        background: var(--bg-black-02);
+        h1 {
+          color: var(--title__dark-highlight);  
+        }
+        
+    }
+
+    .retro-img {
+        grid-area: retro-img;
+        background: var(--bg__black-06);
+    }
+    // the bit that holds the story about it. 
+    .retro-story {
+        grid-area: story;
+        background: var(--bg__white-04);
+    }
+
+    .retro-highlights {
+        grid-area: highlights;
+        background: var(--bg__white-06);
+    }
+    
+    p {
+       grid-column: 2 / 5;
+       @include edge-buffer;
+    }
+}

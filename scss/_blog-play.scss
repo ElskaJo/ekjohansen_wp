@@ -1,0 +1,48 @@
+
+// for a staggered blog page, likely used on play. 
+.play__post-pg {
+
+  header {
+    background: var(--bg__black-02);  
+  }
+
+  p,
+  blockquote p {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    &:nth-of-type(odd) { 
+      grid-column: 2 / 6;
+      background: linear-gradient(to right, var(--bg__white-02), transparent);
+      
+    }
+    &:nth-of-type(even) { 
+      grid-column: 3 / 7;
+      background: linear-gradient(to left, var(--bg__white-02), transparent);
+    }
+  }
+
+  .play__featured-img {
+    //cause you know i'll need css here when i slip wordpress in
+  }
+
+  .play__blocks-content,
+  blockquote {
+    @media screen and (min-width:800px) {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  .play__blocks-content {
+    background: var(--bg__white-05);
+  }
+
+  blockquote {
+    background: var(--bg__white-02);
+    @include edge-buffer;
+    
+  }
+}

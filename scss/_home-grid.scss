@@ -1,0 +1,80 @@
+// classes naming the grid areas for home page
+
+
+.home-grid__about {
+  //background: var(--bg__white-05);
+  grid-area: about;
+}
+
+.home-grid__intro {
+    background: var(--bg__white-02);
+    grid-area: intro;
+
+    h2 {
+        color: var(--body-txt-highlight);
+    }
+}
+
+.home-grid__work {
+    background: var(--bg__white-08);
+    grid-area: work;
+
+    h2 {
+        color: var(--body-txt-highlight);
+    }
+}
+
+.home-grid__play {
+    background: var(--bg__white-06);
+    grid-area: play;
+}
+
+
+
+.home-grid__retro {
+    background: var(--bg__white-04);
+    grid-area: retro;
+    padding: 0;
+
+    h2 {
+        padding: 2rem 2rem 1rem; // matches the other boxes' padding
+    }
+    p {
+        padding: 0;
+    }
+
+    // the flex inside of the container 
+    .home-grid__retro--snippets {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-direction: column; 
+
+        @media screen and (min-width:600px) {
+            flex-direction: row;
+        }
+
+        div {
+            flex: 1; // all the same width
+            @include edge-buffer;
+            border-bottom: 1px dotted grey;
+
+            p {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            @media screen and (min-width:600px) {
+                margin: 0.5rem 0.5rem 4rem;
+                border: 1px dotted grey;
+            }
+        }
+    }
+}
+
+// changing text colors on boxes that are darker. 
+.home-grid__retro {
+    h2, p {
+        color: var(--body-txt);
+    }
+}

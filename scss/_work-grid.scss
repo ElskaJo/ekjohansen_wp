@@ -1,0 +1,75 @@
+// for the work page. Though it's different than the other categories. 
+.work-grid {
+
+    .work-grid__intro {
+      grid-area: intro;
+      background: var(--bg__white-06);
+    }
+
+    .work-grid__highlight {
+      grid-area: highlight;
+      //background: var(--bg__white-04);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .work-grid__sidebar {
+      grid-area: sidebar;
+      background: var(--bg__white-02);
+      h2 {
+        color: var(--title__dark-highlight);
+      } 
+    }
+
+    .work-grid__play {
+      grid-area: play;
+      background: var(--bg__white-06);
+    }
+
+    .work-grid__skills {
+      grid-area: skills;
+      background: var(--bg__black-04);
+      color: var(--body-txt-light);
+
+      h2 {
+        color: var(--title__alt-color);
+      }
+    }
+
+    .work-grid__study {
+      grid-area: study;
+      background: var(--bg__white-04);
+    }
+
+   .word-grid__img {
+     grid-area: work-img;
+   }
+
+    .work-grid__more {
+      grid-area: more;
+      justify-content: flex-end;
+      background: var(--bg__white-06);
+
+      p:first-of-type {
+        padding-top: 2rem; // to even it all out.
+      }
+    }
+
+    .work-grid__learning {
+      grid-area: learning;
+      background: var(--bg__white-02);
+      // one px larger than ipad pro. because the 3 columns look too cramped still
+      @media screen and (min-width: 1025px) {
+        ul {
+          display: flex;
+          justify-content: space-between;
+        }
+        li {
+          max-width: 31%;
+            &:nth-of-type(even) {
+            margin: 0 2rem;
+          }
+        }
+      }
+    }
+}

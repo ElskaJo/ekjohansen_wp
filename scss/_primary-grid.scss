@@ -1,0 +1,63 @@
+// the grid from which all the different pages will pull. 
+// pages that use this: home, about,
+.primary-grid {
+  position: relative;
+
+  // as this type of grid has the same spacing across several pages: 
+  > article {
+    display: flex;
+    flex-direction: column;
+
+    p, h2 {
+      @include edge-buffer;
+    }
+
+    p:last-of-type {
+        padding-bottom: 2rem;
+    }
+  }
+
+  // only on larger screens
+  @media screen and (min-width: 800px) {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: auto;
+
+    // as this type of grid has the same spacing across several pages:
+    > article {
+      p, h2 {
+          padding: 1rem 2rem;
+      }
+      h2 {
+        padding-top: 2rem; // when we changed line height, it affected distancing
+      }
+  
+      p:last-of-type {
+          padding-bottom: 2rem;
+      }
+    }
+    
+    &.home-grid {
+      grid-template-areas: 
+      "about about intro intro intro"
+      "about about work work play"
+      "retro retro retro retro retro"
+      "learning learning learning skills skills";
+    }
+
+    // &.about-grid {
+    //   grid-template-areas: 
+    //   "intro intro intro sidebar sidebar"
+    //   "progress1 progress1 progress1 progress1 progress1"
+    //   "progress2 progress2 progress3 progress3 progress3";
+    // }
+
+    &.work-grid {
+      grid-template-areas: 
+      "intro intro intro sidebar sidebar"
+      "highlight highlight highlight sidebar sidebar"
+      "skills skills study study study"
+      "learning learning learning more more";
+    }
+  }
+}

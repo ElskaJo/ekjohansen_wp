@@ -1,0 +1,35 @@
+
+h1 {
+  font-size: 4rem;
+  color: var(--title__highlight);
+  line-height: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 3rem;
+  //color: var(--h2-color);
+  color: inherit; // testing this out, seeing if swapping out dark to light bg and text colors can be streamlined a bit.
+  text-shadow: 0 0 1px black;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--h3-color);
+  font-weight: 400;
+}
+
+p {
+  @include edge-buffer;
+}
+
+//except in the footer 
+footer p {
+  padding: 0.5rem 0;
+}

@@ -1,0 +1,226 @@
+// where we set up the classes for js to swap out when user switches themes. 
+// the variables used to define the colors themselves are in variables.scss, separated by theme, with the ones used in both set ahead. 
+
+// the soft greenish theme
+.default {
+
+    --body-bg-color: #{$green-base};
+    --body-txt: #{$black};
+    --body-txt-light: #{$white};
+    --body-txt-highlight: inherit;
+
+    // header bg 
+    --header__bg-base: #{$header-green};
+    --header__bg: #{$white-07};
+
+    // name/logo
+    --header__logo--a: #{$black}; 
+    --header__logo--initials: #{$white}; 
+    --header__logo--bg: #{$white-04}; // alt bg could be this creamier yellow: fde395
+    --header__logo-bg--hover: #{$yellow-base};
+
+    // here we're going to change this on desktop, because the header's lighter. 
+    @media screen and (min-width: 800px) {
+      --header__logo--initials: #{$pigeon-grey}; 
+    }
+
+    // nav
+    --nav__a: #{$black};
+    --nav__a-underline: #{$black};
+    --nav__a-hover: inherit;
+    --nav__a-bg--hover: #{$yellow-base};
+
+    // mobile menu 
+    --nav__mobile--bg: #{$dove-grey};
+    --nav__mobile--bg-active: #{$dove-grey};
+
+    // mobile button. 
+    --nav__mobile--button-bg: #{$white-05}; 
+    --nav__mobile--button-active: #{$dove-grey};
+    --nav__mobile--button-focus: #{$dove-grey};
+    --nav__mobile-button-link: #{$black};
+    
+    // text links in body 
+    --link__color: #{$black};
+    --link__bg: #{$yellow-base};
+    --link__underline: inherit;
+    --link__bg--focus: #{$yellow-base};
+    --link__txt--focus: inherit;
+
+    // for the faux buttons
+    --textlink__btn-bg: #{$yellow-base};
+    --textlink__btn-bg--hover: #F6E2A6;
+
+    // meta in blog page headers
+    --meta__header--bg: #{$white-05};
+
+    // titles 
+    --title__highlight: #{$white};
+    --h2-color: #{$black};
+    // testing something out. because now, with the boxes, the titles aren't all white. 
+    --title__alt-color: #{$yellow-base};
+    --title__dark-highlight: inherit;
+    
+
+    // bgs shading changes
+    --bg__white-09: #{$white-09};
+    --bg__white-08: #{$white-08};
+    --bg__white-07: #{$white-07};
+    --bg__white-06: #{$white-06};
+    --bg__white-05: #{$white-05};
+    --bg__white-04: #{$white-04};
+    --bg__white-02: #{$white-02};
+
+    --bg__black-06: #{$black-06};
+    --bg__black-04: #{$black-04};
+    --bg__black-02: #{$black-02};
+
+    // list bullets because holy god i can style these now
+    --list__brace: #{$yellow-base};
+
+}
+
+// white. obviously
+.light {
+
+  --body-bg-color: #e6f2f8;
+  --body-txt-light: inherit;
+  --body-txt-highlight: inherit;
+
+  // changing the initials from white. 
+  --header__logo--initials: #21759b;
+  --header__bg-base: #c2e5f5;
+  --header__logo--bg: #1f4a5e;
+  --header__logo--a: rgb(43, 42, 42);
+  --header__logo-bg--hover: #21759b;
+
+  // here we're going to change this on desktop, because the header's darker. 
+  @media screen and (min-width: 800px) {
+    --header__logo--initials: white;
+    --header__logo--a: #87d7fc;
+  }
+
+  // text links
+  --link__bg: rgba(160,217,249,0.9);
+  --link__bg--focus: #21759b;
+  --link__txt--focus: #{$white};
+
+  // for the faux buttons
+  --textlink__btn-bg: #21759b;
+  --textlink__btn-bg--hover: #1f4a5e;
+
+  // changes to nav. 
+  --nav__a: #21759b;
+  --nav__a-hover: #{$white};
+  --nav__a-bg--hover: #21759b;
+
+  // mobile menu 
+  --nav__mobile--bg: #e6f2f8;
+  --nav__mobile--bg-active: #eceaea;
+
+  // mobile button. 
+  --nav__mobile--button-bg: #e6f2f8;
+  --nav__mobile--button-active: #e6f2f8;
+  --nav__mobile--button-focus: #a2cce0;
+  --nav__mobile-button-link: #175572;
+  
+   // for our little theme swapper 
+  --theme-swapper__shadow: #{$black-02};
+  --theme-swapper__txt-link--focus: #{$white};
+
+  // when a text link mimics a button. 
+  --textlink__widths-color: #{$white};
+
+  // titles 
+  --title__alt-color: #0D3344;
+  --title__highlight: inherit;
+  --title__dark-highlight: #0D3344;
+
+  // bgs shading changes
+  --bg__white-09: #{$white-09};
+  --bg__white-08: #{$white-08};
+  --bg__white-07: #{$white-07};
+  --bg__white-06: rgba(255,255,255, 0.5);
+  --bg__white-05: #{$white-05};
+  --bg__white-04: rgba(169,214,237, 0.4);
+  --bg__white-02: rgba(211,232,242, 0.6);
+
+  --bg__black-06: #{$black-06};
+  --bg__black-04: rgba(33, 116, 155, 0.35); //rgb(191, 217, 230);
+  --bg__black-02: rgba(33,117,155,0.25);
+  
+// list bullets because holy god i can style these now
+  --list__brace: #0D3344;
+
+}
+
+
+// dark. ish.
+.dark {
+
+  --body-bg-color: #1b1b1b;
+  --body-txt: #{$white};
+  --body-txt-highlight: #{$spring-green};
+
+  // changing the initials from white.
+  --header__logo--a: #f0efef; // white last name // white hover for initials
+  --header__logo--initials: #{$pale-blue}; // white initials // white hover for last name
+
+  // changes to nav.
+  --nav__a: #{$pale-blue};
+  --nav__a-bg--hover: #215872;
+
+  // header bg 
+  --header__bg-base: black;
+  --header__bg: #3b3b3b;
+  --header__logo--bg: #{$black-02};
+  --header__logo-bg--hover: #{$black};
+
+  // mobile menu 
+  --nav__mobile--bg: #3b3b3b;
+  --nav__mobile--bg-active: #92ccc8;
+
+  // mobile button. 
+  --nav__mobile--button-bg: #3b3b3b;
+  --nav__mobile--button-active: #3b3b3b;
+  --nav__mobile--button-focus: #202020;
+  --nav__mobile-button-link: #{$pale-blue};
+
+  // text links in body 
+  --link__color: #{$pale-blue};
+  --link__bg: transparent;
+  --link__underline: inherit;
+  --link__bg--focus: #{$black};
+
+    // for the faux buttons 
+  --textlink__widths-color: #{$white};
+  --textlink__btn-bg: #21759b;
+  --textlink__btn-bg--hover: #215872;
+
+  // titles 
+  --title__highlight: #{$white};
+  --title__alt-color: #{$spring-green};
+  --title__dark-highlight: #{$spring-green};
+  
+  // bgs shading change
+  --bg__white-09: rgba(134,135,135,0.6);
+  --bg__white-08: rgba(255,255,255,0.15);
+  --bg__white-07: #{$white-07};
+  --bg__white-06: rgba(255,255,255,0.25);
+  --bg__white-05: rgba(255,255,255,0.2);
+  --bg__white-04: rgba(255,255,255,0.1);
+  --bg__white-02: rgba(255,255,255,0.07);
+
+  --bg__black-06: #{$black-06};
+  --bg__black-04: rgba(255,255,255,0.035);
+  --bg__black-02: rgba(255,255,255,0.07);
+
+  // list bullets because holy god i can style these now
+  --list__brace: #{$spring-green};
+
+  .footer__split-box:last-of-type {
+    background: var(--bg__white-08);
+  }
+}
+
+

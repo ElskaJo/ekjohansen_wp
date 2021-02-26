@@ -1,0 +1,107 @@
+// things that are true for all category landing pages. Also, apparently some single pages too.
+
+.category__landing,
+.retro__single-pg,
+.category__retro,
+.play__post-pg,
+.generic__post-pg,
+.generic__alt-pg {
+    header h1 {
+        font-size: 3rem; 
+        padding: 2rem 1rem;
+        @media screen and (min-width: 800px) {
+            font-size: 4rem;
+            padding: 3rem 1.5rem;
+        }
+    }
+}
+
+// generic yet sort of fancy category landing page. 
+.category__landing {
+   
+    header {
+        background: var(--bg__black-02);
+    }
+
+
+    .category__landing-blocks {
+
+        @media screen and (min-width:768px) {
+           display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto; 
+        }
+        
+
+        div {
+            //let's see if we can't make some magic. 
+
+            &:nth-of-type(4n + 1) { //technically here, it's the 5th box and the first, that span  1 - 3 columns.
+                grid-column: 1 / 3;
+                background: var(--bg__white-05);
+            }
+            &:nth-of-type(4n) { // 4th box, span the opposite of the 1st.
+                grid-column: 2 / 4;
+                background: var(--bg__white-02);
+            }
+       
+            // to handle interior layout.
+            display: flex;
+            flex-direction: column;
+       
+            &:nth-of-type(5n + 2) {
+                background: var(--bg__black-02);
+            }
+
+            h2 {
+                padding: 1rem 1rem 0;
+                font-size: 2rem;
+            }
+            .textlink__halfwidth {
+                margin-top: auto;
+                width: 50%;// for now
+                align-self: flex-end; // right aligns item 
+                
+            }
+        }
+    }
+}
+
+// and for the retro category landing page, as she's different
+.category__retro {
+
+    header {
+        background: var(--bg__white-04);
+        margin-bottom: 1rem;
+        
+        h1 {
+            color: var(--title__dark-highlight);
+        }
+    }
+
+    .category__retro-blocks {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        @media screen and (min-width: 1300px) {
+            grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg__white-04);
+
+            h2 {
+                padding: 1rem 1rem 0;
+                font-size: 2rem;
+            }
+
+            .textlink__halfwidth {
+                margin-top: auto;                            
+            }
+        }
+    }
+
+}

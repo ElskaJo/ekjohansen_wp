@@ -1,0 +1,81 @@
+// global settings
+
+html, body {
+  height: 100%; // required for sinking footer.
+}
+
+body {
+  font-size: 16px; // everything else should be rem
+  font-family: 'Merriweather', sans-serif;
+  color: var(--body-txt);
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex; // required for sinking footer.
+  flex-direction: column; // required for sinking footer.
+  background: var(--body-bg-color);
+
+}
+
+
+
+main {
+  position: relative;
+
+  // default list specs. adding a class will change the marker style and color
+ul {
+  padding: 1rem 1rem 1rem 2.5rem;
+  list-style-position: outside;
+
+  li {
+    margin-bottom: 1.2rem;
+    padding-inline-start: 1ch; // determines where the text should start
+  }
+}
+
+.global__bracket-list {
+  li {
+    list-style-type: '{'; // backup for browsers that don't support marker
+
+    &::marker {
+        content: '{';
+        color: var(--list__brace);
+        
+    }
+  }
+}
+// changing a bit for this list. 
+.global__indented-list {
+  list-style-type: '+'; // backup for browsers that don't support marker
+
+  &::marker {
+    content: '+';
+    color: inherit;   
+  }
+}
+
+  article {
+
+    &:first-of-type {
+      @media screen and (max-width: 799px) {
+        padding-top: 3rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// very possibly for changing widths on pages that are laid out with grid. 
+  .full-width {
+    grid-column: 1 / 12;
+    padding: 0;
+  }
+  // so i can add an image that just pokes out beyond the borders of the text. 
+  .mid-width {
+    grid-column: 2 / 10;
+  }
+
+

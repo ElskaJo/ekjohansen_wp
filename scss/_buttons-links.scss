@@ -1,0 +1,48 @@
+// for buttons and links.
+
+a {
+  color: var(--link__color);
+  transition: 0.5s all;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--link__underline);
+  text-decoration-thickness: 0.1rem;
+
+  @include hover() {
+    text-decoration-style: solid;
+    background: var(--link__bg--focus);
+    color: var(--link__txt--focus);
+  }
+}
+
+// because I want the article a tags to have a different bg. and if I tack it on up there, there are more places to go fix that, than this would take. 
+article a,
+footer a {
+   background: linear-gradient(to top, var(--link__bg), transparent);
+}
+
+// first button: for the home page, retro section, goto blog. likely replace this. 
+.textlink__fullwidth,
+.textlink__halfwidth {
+  @include edge-buffer;
+  background: var(--textlink__btn-bg); // test this out as an accent color
+  display: block;
+  text-align: right;
+  font-weight: normal;
+  color: var(--textlink__widths-color);
+  margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
+
+  @include hover() {
+    background: var(--textlink__btn-bg--hover);
+  }
+}
+.textlink__halfwidth {
+  display: inline-block;
+
+  &:nth-of-type(even) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+}
+
+ 

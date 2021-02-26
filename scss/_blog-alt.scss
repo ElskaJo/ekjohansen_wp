@@ -1,0 +1,58 @@
+// because it's getting out of control, these alt layouts. 
+
+//firstly: the very straightforward blog page. 
+.generic__post-pg {
+  header {
+    background: var(--bg__black-04);
+  }
+
+    p {
+      width: 100%; // so it actually reaches all 600px.
+      max-width: 600px;
+      margin: 0 auto;
+      @include edge-buffer;
+
+      &:last-of-type {
+        padding-bottom: 2rem; // this evens out between blockquotes and images
+      }
+    }
+
+    .generic__blocks-content {
+      background: var(--bg__white-04);
+    }
+}
+
+// generic, alt layout for a post. 
+.generic__alt-pg {
+  header {
+    background: var(--bg__black-04);
+  }
+}
+
+.alt__content-blocks {
+  background: var(--bg__white-05);
+
+  @media screen and (min-width:800px) {
+    display: grid; 
+     grid-template-columns: repeat(7, 1fr);
+ }
+ 
+ div { // yeah, I'mma have to revisit this when I get it into gutenberg. 
+  
+     &:nth-of-type(odd) { 
+         grid-column: 2 / 6;
+         background: linear-gradient(to right, var(--bg__white-02), transparent);
+         
+     }
+     &:nth-of-type(even) { 
+         grid-column: 3 / 7;
+         background: linear-gradient(to left, var(--bg__white-02), transparent);
+     }
+
+     @media screen and (min-width: 800px) {
+      padding: 2rem;
+      margin-top: -1rem;
+     }
+
+  }
+}
