@@ -20,29 +20,67 @@ footer a {
    background: linear-gradient(to top, var(--link__bg), transparent);
 }
 
-// first button: for the home page, retro section, goto blog. likely replace this. 
-.textlink__fullwidth,
-.textlink__halfwidth {
-  @include edge-buffer;
+// first button: alrighty so in wordpress, this'll go on the p tag, to save me an absolute migraine. 
+.textlink__fullwidth  {
   background: var(--textlink__btn-bg); // test this out as an accent color
-  display: block;
-  text-align: right;
-  font-weight: normal;
-  color: var(--textlink__widths-color);
   margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
+  padding: 0;
+  transition: 0.5s all;
+  
+  a {   
+    background: transparent; // to nix the bg on all text links
+    display: block;
+    text-align: right;
+    font-weight: normal;
+    color: var(--textlink__widths-color);
+
+  }
 
   @include hover() {
     background: var(--textlink__btn-bg--hover);
   }
 }
-.textlink__halfwidth {
-  display: inline-block;
 
-  &:nth-of-type(even) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+// and these by default are classes on the a tag, so we can put em side by side.
+.textlink__halfwidth {
+  margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
   
+  a {
+    display: inline-block; // so we don't need a parent with flex
+    background: var(--textlink__btn-bg); // test this out as an accent color
+    @include edge-buffer;
+
+    &:nth-of-type(even) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    @include hover() {
+      background: var(--textlink__btn-bg--hover);
+    }
+  }  
+}
+
+// for links that don't need to be fuckoff yellow. put on the p tag above the a, again for simplicity within gutenberg
+.textlink__center-clear,
+.textlink__right-clear {
+    margin-top: auto;
+    padding: 0;
+
+    a {
+      @include edge-buffer;
+      text-align: center;
+      font-weight: 700;
+      background: transparent;
+      display: block;
+
+      @include hover() {
+        background: var(--textlink__btn-bg--hover);
+      }
+    }
+}
+
+.textlink__right-clear a {
+  text-align: right;
 }
 
  

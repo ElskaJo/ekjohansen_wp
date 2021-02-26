@@ -35,6 +35,7 @@
     background: var(--bg__white-04);
     grid-area: retro;
     padding: 0;
+    flex-direction: row;
 
     h2 {
         padding: 2rem 2rem 1rem; // matches the other boxes' padding
@@ -54,20 +55,30 @@
             flex-direction: row;
         }
 
-        div {
+        > div {
             flex: 1; // all the same width
-            @include edge-buffer;
-            border-bottom: 1px dotted grey;
+            margin-bottom: 2rem;
+                     
+            // restyling the h2 and p 
+            p:not(:last-of-type) {
+                @include edge-buffer;
+            }
 
-            p {
-                padding-left: 0;
-                padding-right: 0;
+            // grr
+            p:last-of-type {
+                padding: 0;
+            }
+            
+            .home-grid__retro--subtitle {
+                background: transparent;
+                padding: 0 1rem;
             }
 
             @media screen and (min-width:600px) {
                 margin: 0.5rem 0.5rem 4rem;
-                border: 1px dotted grey;
+                border: 1px dotted grey;               
             }
+
         }
     }
 }

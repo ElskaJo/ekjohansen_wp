@@ -3,39 +3,34 @@
 .primary-grid {
   position: relative;
 
-  // as this type of grid has the same spacing across several pages: 
-  > article {
-    display: flex;
-    flex-direction: column;
 
-    p, h2 {
-      @include edge-buffer;
+   // trying to make all nested divs within this, flex. 
+   div {
+     display: flex;
+     flex-direction: column;
+     flex: 1; // stretches the interior div, so that the buttons are correctly pushed to the bottom edge of the container. this is like heart surgery sometimes.
+   }
+
+    
+    // and changing it for titles in the grid
+    h2 {
+      padding-top: 2rem;
     }
 
     p:last-of-type {
-        padding-bottom: 2rem;
+        padding: 1rem 1rem 2rem;
+
+        &.textlink__fullwidth {
+          @include edge-buffer;
+        }
     }
-  }
+ 
 
   // only on larger screens
   @media screen and (min-width: 800px) {
     display: grid; 
     grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: auto;
-
-    // as this type of grid has the same spacing across several pages:
-    > article {
-      p, h2 {
-          padding: 1rem 2rem;
-      }
-      h2 {
-        padding-top: 2rem; // when we changed line height, it affected distancing
-      }
-  
-      p:last-of-type {
-          padding-bottom: 2rem;
-      }
-    }
+    grid-template-rows: auto; 
     
     &.home-grid {
       grid-template-areas: 

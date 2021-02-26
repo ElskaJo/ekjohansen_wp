@@ -252,7 +252,7 @@ button#header__nav-toggle {
       box-shadow: 0 0 2px var(--theme-swapper__shadow);
   
       @media screen and (min-width: 800px) {  
-          top: -1.5rem; // makes it overlap the header just a touch
+          top: 48px; // makes it overlap the header just a touch
       }
   
       a {
