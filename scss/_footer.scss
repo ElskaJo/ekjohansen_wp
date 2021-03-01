@@ -35,14 +35,20 @@ footer {
   // styling wp's default menu for the footer.
   ul {
     display: flex;
+    flex-direction: column;
+    flex: 1;
 
+    @media screen and (min-width: 800px) {
+      flex-direction: row;
+    }
 
     li {
-      margin: 1rem;
+      margin: 0.5rem;
 
       a {
         padding: 1rem;
-        
+        display: block;
+        text-align: center;
       }
     }
   }

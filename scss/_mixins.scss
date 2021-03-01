@@ -5,7 +5,7 @@
     &:active,
     &:focus,
     &:focus-within {
-        @content;
+      outline: 2px solid var(--focus__outline-color);
     }
   }
 
@@ -15,7 +15,7 @@
     }
     &:focus, 
     &:focus-within {
-      outline: 2px solid var(--focus__outline-color);
+      @content;
     }
   }
 }

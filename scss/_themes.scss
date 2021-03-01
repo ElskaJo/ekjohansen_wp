@@ -192,9 +192,10 @@
 
   // text links in body 
   --link__color: #{$pale-blue};
-  --link__bg: transparent;
+  --link__bg: black;
   --link__underline: inherit;
   --link__bg--focus: #{$black};
+  --link__txt--focus: #{$pale-blue};
 
     // for the faux buttons 
   --textlink__widths-color: #{$white};

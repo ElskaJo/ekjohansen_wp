@@ -17,7 +17,7 @@ a {
 // because I want the article a tags to have a different bg. and if I tack it on up there, there are more places to go fix that, than this would take. 
 article a,
 footer a {
-   background: linear-gradient(to top, var(--link__bg), transparent);
+   background: linear-gradient(to top, var(--link__bg) 25%, transparent 25%);
 }
 
 // first button: alrighty so in wordpress, this'll go on the p tag, to save me an absolute migraine. 

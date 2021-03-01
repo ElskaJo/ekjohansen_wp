@@ -32,6 +32,7 @@ with others.
 // now for page elements/pages.
 @import 'global'; // sets up all top level tags, layout elements.
 @import 'header';
+@import 'nav';
 
 @import 'primary-grid'; // the base grid that most pages and categories will stem from
 @import 'home-grid';
