@@ -24,6 +24,10 @@
       --header__logo--initials: #{$pigeon-grey}; 
     }
 
+    // setting up all focus style. 
+    --focus__outline-color: #000;
+
+
     // nav
     --nav__a: #{$black};
     --nav__a-underline: #{$black};

@@ -49,6 +49,7 @@ footer a {
     display: inline-block; // so we don't need a parent with flex
     background: var(--textlink__btn-bg); // test this out as an accent color
     @include edge-buffer;
+    color: var(--textlink__widths-color);
 
     &:nth-of-type(even) {
       margin-left: 1rem;

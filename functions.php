@@ -85,17 +85,37 @@ function snowfall_image_insert_override( $sizes ) {
 unset( $sizes['medium_large'] );
 return $sizes;
 }
+
 add_action( 'widgets_init', 'snowfall_widgets_init' );
 function snowfall_widgets_init() {
-register_sidebar( array(
-'name' => esc_html__( 'Sidebar Widget Area', 'snowfall' ),
-'id' => 'primary-widget-area',
-'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-'after_widget' => '</li>',
-'before_title' => '<h3 class="widget-title">',
-'after_title' => '</h3>',
-) );
+    register_sidebar( array(
+        'name' => esc_html__( 'Sidebar Widget Area', 'snowfall' ),
+        'id' => 'primary-widget-area',
+        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' => 'Footer Widget Left',
+        'id' => 'footer_widget_left',
+        'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' => 'Footer Widget Right',
+        'id' => 'footer_widget_right',
+        'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
 }
+
 add_action( 'wp_head', 'snowfall_pingback_header' );
 function snowfall_pingback_header() {
 if ( is_singular() && pings_open() ) {
