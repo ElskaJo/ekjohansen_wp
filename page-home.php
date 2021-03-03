@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<main role="main">
+<main class="global__home" role="main">
     <article class="primary-grid home-grid">
         <?php the_content(); ?>
 

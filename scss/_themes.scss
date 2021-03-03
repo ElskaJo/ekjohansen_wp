@@ -64,6 +64,9 @@
     // testing something out. because now, with the boxes, the titles aren't all white. 
     --title__alt-color: #{$yellow-base};
     --title__dark-highlight: inherit;
+
+    // as wp is structuring our pages a little differently: 
+    --bg__play-pg: #587f7d;
     
 
     // bgs shading changes
@@ -140,6 +143,9 @@
   --title__highlight: inherit;
   --title__dark-highlight: #0D3344;
 
+  // as wp is structuring our pages a little differently: 
+  --bg__play-pg: #b4d2e1;
+
   // bgs shading changes
   --bg__white-09: #{$white-09};
   --bg__white-08: #{$white-08};
@@ -206,6 +212,9 @@
   --title__highlight: #{$white};
   --title__alt-color: #{$spring-green};
   --title__dark-highlight: #{$spring-green};
+
+  // as wp is structuring our pages a little differently: 
+  --bg__play-pg: #2b2b2b;
   
   // bgs shading change
   --bg__white-09: rgba(134,135,135,0.6);

@@ -10,7 +10,7 @@
 </head>
 
 <body <?php body_class('default'); ?>>
-	<div id="wrapper" class="hfeed">
+
 	<header id="header">
 
 		<div class="header__logo">

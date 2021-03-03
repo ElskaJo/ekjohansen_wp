@@ -1,0 +1,27 @@
+// alrighty. wp is making us completely rethink how we're laying out our different pages. 
+
+// GOAL: retro, play, and work all have differing layouts, possibly. so that a user can tell which category they're in, based on layout. that sounds insane, writing it out right now but I'm on T3s. So the insanity could all be mine. 
+
+
+// main class, and universal truths for all content in each page, regardless of category.
+.post__single {
+    position: relative;
+    // header and h1 specs are in blog-categories, as they share styles.
+
+    // class the featured image is in, on all pages. 
+    .post__img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+}
+
+
+
+
+
+article.category-work {
+
+}

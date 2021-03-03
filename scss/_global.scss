@@ -16,8 +16,6 @@ body {
 
 }
 
-
-
 main {
   position: relative;
 
@@ -43,6 +41,7 @@ ul {
     }
   }
 }
+
 // changing a bit for this list. 
 .global__indented-list {
   list-style-type: '+'; // backup for browsers that don't support marker
@@ -53,7 +52,7 @@ ul {
   }
 }
 
-  article {
+  article.home-grid {
 
     &:first-of-type {
       @media screen and (max-width: 799px) {

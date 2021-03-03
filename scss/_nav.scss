@@ -150,7 +150,8 @@ nav {
       }
   
       // setting up the current state in wp
-      &.current-menu-item a {
+      &.current-menu-item a,
+      &.current-post-parent a {
         color: var(--nav__a-hover);
         background: var(--nav__a-bg--hover);
       }
