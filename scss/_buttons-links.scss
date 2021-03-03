@@ -43,13 +43,19 @@ footer a {
 
 // and these by default are classes on the a tag, so we can put em side by side.
 .textlink__halfwidth {
-  margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
   
   a {
-    display: inline-block; // so we don't need a parent with flex
+    display: block;
+    text-align: center;
     background: var(--textlink__btn-bg); // test this out as an accent color
     @include edge-buffer;
     color: var(--textlink__widths-color);
+    margin: 1rem 0; // so we have space on mobile
+
+    @media screen and (min-width: 768px) {
+      display: inline-block; // so we don't need a parent with flex
+      margin: 0;
+    }
 
     &:nth-of-type(even) {
       margin-left: 1rem;

@@ -42,22 +42,13 @@ ul {
   }
 }
 
-// changing a bit for this list. 
-.global__indented-list {
-  list-style-type: '+'; // backup for browsers that don't support marker
+  // changing a bit for this list. 
+  .global__indented-list {
+    list-style-type: '+'; // backup for browsers that don't support marker
 
-  &::marker {
-    content: '+';
-    color: inherit;   
-  }
-}
-
-  article.home-grid {
-
-    &:first-of-type {
-      @media screen and (max-width: 799px) {
-        padding-top: 3rem;
-      }
+    &::marker {
+      content: '+';
+      color: inherit;   
     }
   }
 }

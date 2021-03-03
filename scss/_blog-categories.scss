@@ -1,7 +1,9 @@
 // things that are true for all category landing pages. Also, apparently some single pages too.
 
 .category__landing,
-.post__single  {
+.post__single,
+.generic__alt-pg,
+.work__landing  {
     header {
         padding-top: 2rem;
         @media screen and (min-width:800px) {
@@ -16,6 +18,10 @@
                 padding: 3rem 1.5rem;
             }
         }
+    }
+
+    .textlink__halfwidth {
+         margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
     }
 }
 

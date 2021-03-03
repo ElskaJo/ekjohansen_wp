@@ -3,22 +3,26 @@
 .primary-grid {
   position: relative;
 
-
    // trying to make all nested divs within this, flex. 
    div {
      display: flex;
      flex-direction: column;
      flex: 1; // stretches the interior div, so that the buttons are correctly pushed to the bottom edge of the container. this is like heart surgery sometimes.
+
+     &:first-of-type {
+      @media screen and (max-width: 799px) {
+        padding-top: 2rem;
+      }
+     }
    }
 
-    
     // and changing it for titles in the grid
     h2 {
       padding-top: 2rem;
     }
 
     p:last-of-type {
-        padding: 1rem 1rem 2rem;
+        padding: 1rem 2rem 2rem;
 
         &.textlink__fullwidth {
           @include edge-buffer;

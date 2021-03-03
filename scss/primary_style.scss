@@ -40,9 +40,11 @@ with others.
 // @import 'layout/about-grid';
 @import 'blog-categories';
 @import 'blog-retro';
-@import 'blog-alt';
 @import 'blog-play';
 @import 'blog-single-all';
+
+// for any pages we may need. 
+@import 'page-generic';
 
 @import 'footer';
 @import 'themes';

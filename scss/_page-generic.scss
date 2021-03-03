@@ -1,9 +1,10 @@
-// because it's getting out of control, these alt layouts. 
+// alright. for page layouts, starting with the generic one. 
 
-//firstly: the very straightforward blog page. 
-.generic__post-pg {
+.generic__alt-pg {
+ 
   header {
-    background: var(--bg__black-04);
+    background: var(--bg__white-02);
+    color: var(--title__dark-highlight);
   }
 
     p {
@@ -16,19 +17,10 @@
         padding-bottom: 2rem; // this evens out between blockquotes and images
       }
     }
-
-    .generic__blocks-content {
-      background: var(--bg__white-04);
-    }
 }
 
-// generic, alt layout for a post. 
-.generic__alt-pg {
-  header {
-    background: var(--bg__black-04);
-  }
-}
 
+// splits up the p's into a grid, technically. this way I can change layout and swap out colors if (oh let's be honest, that's a when) I want to shake things up
 .alt__content-blocks {
   background: var(--bg__white-05);
 
@@ -37,7 +29,7 @@
      grid-template-columns: repeat(7, 1fr);
  }
  
- div { // yeah, I'mma have to revisit this when I get it into gutenberg. 
+ p, pre { 
   
      &:nth-of-type(odd) { 
          grid-column: 2 / 6;
@@ -50,9 +42,16 @@
      }
 
      @media screen and (min-width: 800px) {
-      padding: 2rem;
+      padding: 3rem 2rem;
       margin-top: -1rem;
      }
+  }
 
+  > div {
+    grid-column: 2 / 7;
+
+    p {
+      max-width: 100%;
+    }
   }
 }

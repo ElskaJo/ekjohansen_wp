@@ -7,7 +7,9 @@ get_header(); ?>
 
 <main class="global__home" role="main">
     <article class="primary-grid home-grid">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
+        <?php endwhile; endif; ?>
 
         <!-- adding the retro blog thingy. goddamn been writing code too long today -->
         <div class="home-grid__retro">
@@ -50,6 +52,7 @@ get_header(); ?>
             </p>
         </div>
     </article>
+  
 </main>
 
 <?php get_footer(); ?>

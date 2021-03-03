@@ -1,10 +1,15 @@
-<?php get_header(); ?>
-<main class="category__landing">
-    <header class="category__header">
+<?php 
+/*
+** Work category template 
+*/
+get_header(); ?>
+
+<main class="work__landing">
+    <header class="work__header">
         <h1><?php single_term_title(); ?></h1>
     </header>
 
-    <div class="category__landing-desc">
+    <div class="work__landing-desc">
         <?php if ( '' != the_archive_description() ) { echo ( the_archive_description() ); } ?>
     </div>
 

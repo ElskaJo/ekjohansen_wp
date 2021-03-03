@@ -9,8 +9,10 @@
     .work-grid__highlight {
       grid-area: highlight;
       //background: var(--bg__white-04);
-      justify-content: center;
-      align-items: center;
+      div {
+        text-align: center;
+      }
+      
     }
 
     .work-grid__sidebar {
