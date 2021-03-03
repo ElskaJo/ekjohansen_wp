@@ -78,6 +78,33 @@
 
 // alright. rewriting some stuff here to play nice with dynamic classes. hold onto yer butts. 
 
+// work category landing page. 
+body.category-work {
+
+    .category__header {
+        background: var(--bg__white-02);
+    }
+
+    // setting up the layout for the play category landing page.
+    .category__landing-blocks {
+
+        article {
+            //let's see if we can't make some magic. 
+
+            &:nth-of-type(4n + 1) { //technically here, it's the 5th box and the first, that span  1 - 3 columns.
+                grid-column: 1 / 3;
+                background: var(--bg__white-05);
+            }
+            &:nth-of-type(4n) { // 4th box, span the opposite of the 1st.
+                grid-column: 2 / 4;
+                background: var(--bg__white-02);
+            }
+            &:nth-of-type(5n + 2) {
+                background: var(--bg__black-02);
+            }
+        }
+    }
+}
 // retro category landing page.
 body.category-retro {
 
