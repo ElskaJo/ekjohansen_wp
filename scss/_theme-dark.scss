@@ -1,0 +1,112 @@
+// dark. ish.
+.dark {
+
+    --body-bg-color: #1b1b1b;
+    --body-txt: #{$white};
+    --body-txt-highlight: #{$spring-green};
+  
+    // header bg 
+    --header__bg-base: black;
+    --header__bg: #3b3b3b;
+
+     // name/logo
+     --header__logo-bg: rgba(0,0,0,0.4);
+     --header__logo-bg--hover: #{$black};
+     --header__logo-a: #f0efef; // white last name // white hover for initials
+     --header__logo-initials: #{$pale-blue}; // white initials // white hover for last name
+  
+    // changes to nav.
+    --nav__a: #{$pale-blue};
+    --nav__a-bg--hover: #215872;
+
+    // mobile menu 
+    --nav__mobile-bg: #3b3b3b;
+    --nav__mobile-bg--active: #92ccc8;
+  
+    // mobile button. 
+    --nav__mobile-button-bg: #3b3b3b;
+    --nav__mobile-button--active: #3b3b3b;
+    --nav__mobile--button--focus: #202020;
+    --nav__mobile-button-link: #{$pale-blue};
+  
+    // for our little theme swapper 
+    --theme-swapper__bg: rgba(0,0,0,0.3);
+    --theme-swapper__txt-link--focus: #{$white};
+
+    // text links in body 
+    --link__color: #{$pale-blue};
+    --link__bg: transparent;
+    --link__underline: inherit;
+    --link__bg--focus: #{$black};
+    --link__txt--focus: #{$pale-blue};
+  
+      // for the faux buttons 
+    --textlink__widths-color: #{$white};
+    --textlink__btn-bg: #21759b;
+    --textlink__btn-bg--hover: #215872;
+  
+    /// grids, used on the homepage, what i do and about pgs.
+    --home__intro-bg: rgba(255,255,255, 0.07);
+    --home__intro-title-color: #{$spring-green};
+    --home__work-bg: rgba(255,255,255,0.15);
+    --home__play-bg: rgba(255,255,255,0.25);
+    --home__retro-bg: rgba(255,255,255,0.1);
+
+    --work-grid__intro-bg: rgba(255,255,255,0.25);
+
+    --work-grid__sidebar-bg: rgba(255,255,255,0.07);
+    --work-grid__sidebar-title-color: #{$spring-green};
+
+    --work-grid__highlight-bg: transparent;
+
+    --work-grid__skills-bg: rgba(255,255,255,0.035);
+    --work-grid__skills-title-color: #{$spring-green};
+
+    --work-grid__study-bg: rgba(255,255,255,0.1);
+    --work-grid__more-bg: rgba(0,0,0,0.03);
+    --work-grid__learning-bg: rgba(255,255,255,0.07);
+
+    // generic page settings
+    --generic__header-bg: rgba(255,255,255, 0.06);
+    --generic__alt-blocks-bg: rgba(255,255,255, 0.12);
+    --generic__alt-blocks-bg-odd: rgba(255,255,255, 0.06);
+    --generic__alt-blocks-bg-even: rgba(255,255,255, 0.06);
+
+    // play category pages and matching post pages.
+    --play__header-bg: rgba(0,0,0, 0.2);
+    --play__title-color: #e9c765;
+    --play__post-bg: rgba(0,0,0,0.05);
+    --play__post-blocks-bg-odd: rgba(255,255,255,0.15);
+    --play__post-blocks-bg-even: rgba(255,255,255,0.2);
+    --play__post-blocks-bg-alt: rgba(255,255,255,0.12);
+    --play__paragraph-bg: rgba(255,255,255, 0.02);
+    --play__blockq-bg: rgba(255,255,255, 0.06);
+
+    // retro category pages and matching post pages.
+    --retro__header-bg: rgba(0,0,0,0.1);
+    --retro__title-color: #{$spring-green};
+    --retro__post-bg: rgba(255,255,255,0.04);
+    --retro__post-blocks-bg-odd: rgba(255,255,255,0.05);
+    --retro__post-blocks-bg-even: rgba(255,255,255,0.2);
+    --retro__post-blocks-bg-alt: rgba(0,0,0,0.2);
+    --retro__story-bg: rgba(255,255,255,0.4);
+    --retro__highlights-bg: rgba(255,255,255,0.6);
+    --retro__paragraph-bg: rgba(255,255,255,0.02);
+
+    // work category pages and matching post pages. 
+    --work__header-bg: rgba(255,255,255,0.06);
+    --work__title-color: inherit;
+    --work__post-bg: rgba(255,255,255,0.03);
+    --work__post-blocks-bg-odd: rgba(0,0,0,0.25);
+    --work__post-blocks-bg-even: rgba(255,255,255,0.2);
+    --work__post-blocks-bg-alt: rgba(255,255,255,0.02);
+
+    --footer__block-bg-odd: rgba(255,255,255,0.1);
+  
+    // list bullets because holy god i can style these now
+    --list__brace: #{$spring-green};
+
+  }
+  
+  
+  

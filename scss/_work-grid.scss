@@ -3,44 +3,60 @@
 
     .work-grid__intro {
       grid-area: intro;
-      background: var(--bg__white-06);
+      background: var(--work-grid__intro-bg);
+      color: var(--work-grid__intro-txtcolor);
+
+      h2 {
+        color: var(--work-grid__intro-title-color);
+      }
     }
 
     .work-grid__highlight {
       grid-area: highlight;
-      //background: var(--bg__white-04);
+      background: var(--work-grid__highlight-bg);
+      color: var(--work-grid__highlight-txtcolor);
       div {
         text-align: center;
       }
-      
+      h2 {
+        color: var(--work-grid__highlight-title-color);
+      }
     }
 
     .work-grid__sidebar {
       grid-area: sidebar;
-      background: var(--bg__white-02);
+      background: var(--work-grid__sidebar-bg);
+      color: var(--work-grid__sidebar-txtcolor);
       h2 {
-        color: var(--title__dark-highlight);
+        color: var(--work-grid__sidebar-title-color);
       } 
     }
 
     .work-grid__play {
       grid-area: play;
-      background: var(--bg__white-06);
+      background: var(--work-grid__play-bg);
+      color: var(--work-grid__play-txtcolor);
+      h2 {
+        color: var(--work-grid__play-title-color);
+      }
     }
 
     .work-grid__skills {
       grid-area: skills;
-      background: var(--bg__black-04);
-      color: var(--body-txt-light);
-
+      background: var(--work-grid__skills-bg);
+      color: var(--work-grid__skills-txtcolor);
       h2 {
-        color: var(--title__alt-color);
+        color: var(--work-grid__skills-title-color);
       }
     }
 
     .work-grid__study {
       grid-area: study;
-      background: var(--bg__white-04);
+      background: var(--work-grid__study-bg);
+      color: var(--work-grid__study-txtcolor);
+      h2 {
+        color: var(--work-grid__study-title-color);
+      }
     }
 
    .word-grid__img {
@@ -50,7 +66,8 @@
     .work-grid__more {
       grid-area: more;
       justify-content: flex-end;
-      background: var(--bg__white-06);
+      background: var(--work-grid__more-bg);
+      color: var(--work-grid__more-txtcolor);
 
       p:first-of-type {
         padding-top: 2rem; // to even it all out.
@@ -59,7 +76,11 @@
 
     .work-grid__learning {
       grid-area: learning;
-      background: var(--bg__white-02);
+      background: var(--work-grid__learning-bg);
+      color: var(--work-grid__learning-txtcolor);
+      h2 {
+        color: var(--work-grid__learning-title-color);
+      }
       // one px larger than ipad pro. because the 3 columns look too cramped still
       @media screen and (min-width: 1025px) {
         ul {

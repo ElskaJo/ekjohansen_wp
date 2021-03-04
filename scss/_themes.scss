@@ -14,19 +14,21 @@
     --header__bg: #{$white-07};
 
     // name/logo
-    --header__logo--a: #{$black}; 
-    --header__logo--initials: #{$white}; 
-    --header__logo--bg: #{$white-04}; // alt bg could be this creamier yellow: fde395
+    --header__logo-a: #{$black}; 
+    --header__logo-initials: #{$white}; 
+    --header__logo-bg: #{$white-04}; // alt bg could be this creamier yellow: fde395
     --header__logo-bg--hover: #{$yellow-base};
 
     // here we're going to change this on desktop, because the header's lighter. 
     @media screen and (min-width: 800px) {
-      --header__logo--initials: #{$pigeon-grey}; 
+      --header__logo-initials: #{$pigeon-grey}; 
     }
 
     // setting up all focus style. 
     --focus__outline-color: #000;
 
+    //theme swapper values 
+    --ts__bg: rgba(255,255,255,0.9);
 
     // nav
     --nav__a: #{$black};
@@ -35,13 +37,13 @@
     --nav__a-bg--hover: #{$yellow-base};
 
     // mobile menu 
-    --nav__mobile--bg: #{$dove-grey};
-    --nav__mobile--bg-active: #{$dove-grey};
+    --nav__mobile-bg: #{$dove-grey};
+    --nav__mobile-bg--active: #{$dove-grey};
 
     // mobile button. 
-    --nav__mobile--button-bg: #{$white-05}; 
-    --nav__mobile--button-active: #{$dove-grey};
-    --nav__mobile--button-focus: #{$dove-grey};
+    --nav__mobile-button-bg: #{$white-05}; 
+    --nav__mobile-button--active: #{$dove-grey};
+    --nav__mobile--button--focus: #{$dove-grey};
     --nav__mobile-button-link: #{$black};
     
     // text links in body 
@@ -54,25 +56,91 @@
     // for the faux buttons
     --textlink__btn-bg: #{$yellow-base};
     --textlink__btn-bg--hover: #F6E2A6;
-
-    // meta in blog page headers
-    --meta__header--bg: #{$white-05};
-
-    // titles 
-    --title__highlight: #{$white};
-    --h2-color: #{$black};
+   
     // testing something out. because now, with the boxes, the titles aren't all white. 
     --title__alt-color: #{$yellow-base};
     --title__dark-highlight: inherit;
-
-    // as wp is structuring our pages a little differently: 
-    --bg__play-pg: #587f7d;
     
 
+  // grids, used on the homepage, what i do and about pgs.
+    --home__intro-bg: rgba(255,255,255,0.2);
+    --home__intro-title-color: inherit;
+
+    --home__work-bg: rgba(255,255,255,0.8);
+    --home__work-title-color: inherit;
+
+    --home__play-bg: rgba(255,255,255,0.6);
+    --home__play-title-color: inherit;
+
+    --home__retro-bg: rgba(255,255,255,0.4);
+    --home__retro-title-color: inherit;
+    --home__retro-txt-color: inherit;
+
+    --work-grid__intro-bg: rgba(255,255,255,0.6);
+    --work-grid__intro-txtcolor: inherit;
+    --work-grid__intro-title-color: inherit;
+
+    --work-grid__highlight-bg: rgba(255,255,255,0.4);
+    --work-grid__highlight-txtcolor: inherit;
+    --work-grid__highlight-title-color: inherit;
+
+    --work-grid__sidebar-bg: rgba(255,255,255,0.2);
+    --work-grid__sidebar-txtcolor: inherit;
+    --work-grid__sidebar-title-color: inherit;
+
+    --work-grid__play-bg: rgba(255,255,255,0.6);
+    --work-grid__play-txtcolor: inherit;
+    --work-grid__play-title-color: inherit;
+
+    --work-grid__skills-bg: rgba(0,0,0,0.4);
+    --work-grid__skills-txtcolor: white;
+    --work-grid__skills-title-color: #{$yellow-base};
+
+    
+    --work-grid__study-bg: rgba(255,255,255,0.4);
+    --work-grid__study-txtcolor: inherit;
+    --work-grid__study-title-color: inherit;
+
+    --work-grid__more-bg: rgba(255,255,255,0.6);
+    --work-grid__more-txtcolor: inherit;
+
+    --work-grid__learning-bg: rgba(255,255,255,0.2);
+    --work-grid__learning-txtcolor: inherit;
+    --work-grid__learning-title-color: inherit; 
+
+    // generic page settings
+    --generic__header-bg: rgba(255,255,255,0.2);
+    --generic__title-color: inherit;
+    --generic__alt-blocks-bg-odd: rgba(255,255,255,0.2);
+    --generic__alt-blocks-bg-even: rgba(255,255,255,0.2);
+     
+    // play category pages and matching post pages.
+    --play__header-bg: rgba(255,255,255,0.2);
+    --play__title-color: inherit;
+    --play__post-bg: rgba(255,255,255,0.5);
+    --play__paragraph-bg: rgba(255,255,255,0.2);
+    --play__blockq-bg: rgba(255,255,255,0.2);
+
+    // retro category pages and matching post pages. 
+    --retro__header-bg: rgba(255,255,255,0.4);
+    --retro__title-color: inherit;
+    --retro__post-bg: rgba(255,255,255,0.4);
+    --retro__story-bg: rgba(255,255,255,0.4);
+    --retro__highlights-bg: rgba(255,255,255,0.6);
+
+    // work category pages and matching post pages. 
+    --work__header-bg: rgba(255,255,255,0.6);
+    --work__title-color: inherit;
+    --work__post-bg: rgba(255,255,255,0.3);
+
+    // footer colors. 
+    --footer__block-bg-odd: rgba(255,255,255,0.4);
+    --footer__block-txt-odd: inherit;
+    --footer__block-bg-even: rgba(255,255,255,0.2);
+    --footer__block-txt-odd: inherit;
+
     // bgs shading changes
-    --bg__white-09: #{$white-09};
-    --bg__white-08: #{$white-08};
-    --bg__white-07: #{$white-07};
+
     --bg__white-06: #{$white-06};
     --bg__white-05: #{$white-05};
     --bg__white-04: #{$white-04};
@@ -95,16 +163,16 @@
   --body-txt-highlight: inherit;
 
   // changing the initials from white. 
-  --header__logo--initials: #21759b;
+  --header__logo-initials: #21759b;
   --header__bg-base: #c2e5f5;
-  --header__logo--bg: #1f4a5e;
-  --header__logo--a: rgb(43, 42, 42);
+  --header__logo-bg: #1f4a5e;
+  --header__logo-a: rgb(43, 42, 42);
   --header__logo-bg--hover: #21759b;
 
   // here we're going to change this on desktop, because the header's darker. 
   @media screen and (min-width: 800px) {
-    --header__logo--initials: white;
-    --header__logo--a: #87d7fc;
+    --header__logo-initials: white;
+    --header__logo-a: #87d7fc;
   }
 
   // text links
@@ -122,13 +190,13 @@
   --nav__a-bg--hover: #21759b;
 
   // mobile menu 
-  --nav__mobile--bg: #e6f2f8;
-  --nav__mobile--bg-active: #eceaea;
+  --nav__mobile-bg: #e6f2f8;
+  --nav__mobile-bg--active: #eceaea;
 
   // mobile button. 
-  --nav__mobile--button-bg: #e6f2f8;
-  --nav__mobile--button-active: #e6f2f8;
-  --nav__mobile--button-focus: #a2cce0;
+  --nav__mobile-button-bg: #e6f2f8;
+  --nav__mobile-button--active: #e6f2f8;
+  --nav__mobile--button--focus: #a2cce0;
   --nav__mobile-button-link: #175572;
   
    // for our little theme swapper 
@@ -140,11 +208,15 @@
 
   // titles 
   --title__alt-color: #0D3344;
-  --title__highlight: inherit;
   --title__dark-highlight: #0D3344;
+  --title__play-pg: inherit;
+  --title__work-pg: inherit;
+  --title__retro-pg: inherit;
 
   // as wp is structuring our pages a little differently: 
   --bg__play-pg: #b4d2e1;
+  --work__header-bg: #dbecf4;
+  --bg__retro-pg: #cee7f4;
 
   // bgs shading changes
   --bg__white-09: #{$white-09};
@@ -173,8 +245,8 @@
   --body-txt-highlight: #{$spring-green};
 
   // changing the initials from white.
-  --header__logo--a: #f0efef; // white last name // white hover for initials
-  --header__logo--initials: #{$pale-blue}; // white initials // white hover for last name
+  --header__logo-a: #f0efef; // white last name // white hover for initials
+  --header__logo-initials: #{$pale-blue}; // white initials // white hover for last name
 
   // changes to nav.
   --nav__a: #{$pale-blue};
@@ -187,13 +259,13 @@
   --header__logo-bg--hover: #{$black};
 
   // mobile menu 
-  --nav__mobile--bg: #3b3b3b;
-  --nav__mobile--bg-active: #92ccc8;
+  --nav__mobile-bg: #3b3b3b;
+  --nav__mobile-bg--active: #92ccc8;
 
   // mobile button. 
-  --nav__mobile--button-bg: #3b3b3b;
-  --nav__mobile--button-active: #3b3b3b;
-  --nav__mobile--button-focus: #202020;
+  --nav__mobile-button-bg: #3b3b3b;
+  --nav__mobile-button--active: #3b3b3b;
+  --nav__mobile--button--focus: #202020;
   --nav__mobile-button-link: #{$pale-blue};
 
   // text links in body 
@@ -209,12 +281,17 @@
   --textlink__btn-bg--hover: #215872;
 
   // titles 
-  --title__highlight: #{$white};
+
   --title__alt-color: #{$spring-green};
   --title__dark-highlight: #{$spring-green};
+  --title__play-pg: #e9c765;
+  --title__work-pg: inherit;
+  --title__retro-pg: #{$spring-green};
 
   // as wp is structuring our pages a little differently: 
   --bg__play-pg: #2b2b2b;
+  --work__header-bg: #050505;
+  --bg__retro-pg: #161616;
   
   // bgs shading change
   --bg__white-09: rgba(134,135,135,0.6);
@@ -232,9 +309,9 @@
   // list bullets because holy god i can style these now
   --list__brace: #{$spring-green};
 
-  .footer__split-box:last-of-type {
-    background: var(--bg__white-08);
-  }
+  // .footer__split-box:last-of-type {
+  //   background: var(--bg__white-08);
+  // }
 }
 
 

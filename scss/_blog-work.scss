@@ -2,15 +2,18 @@
 
 .single-post article.category-work {
 
-    background: var(--bg__white-05);
-
     header {
-      background: var(--bg__white-02); // because we're changing the bg on the parent
+      background: var(--work__header-bg); // because we're changing the bg on the parent
+      color: var(--work__title-color);
+    }
+
+    .post__bg {
+      background: var(--work__post-bg);
     }
 
     p {
         width: 100%; // so it actually reaches all 600px.
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto;
         @include edge-buffer;
   

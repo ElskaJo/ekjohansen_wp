@@ -48,6 +48,8 @@ with others.
 @import 'page-generic';
 
 @import 'footer';
-@import 'themes';
-
+//@import 'themes';
+@import 'theme-default';
+@import 'theme-light';
+@import 'theme-dark';
 /* colors checked against this WebAIM contrast checker. https://webaim.org/resources/contrastchecker/ */

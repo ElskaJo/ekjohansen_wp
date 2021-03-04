@@ -3,8 +3,8 @@
 .generic__alt-pg {
  
   header {
-    background: var(--bg__white-02);
-    color: var(--title__dark-highlight);
+    background: var(--generic__header-bg);
+    color: var(--generic__title-color);
   }
 
     p {
@@ -22,7 +22,7 @@
 
 // splits up the p's into a grid, technically. this way I can change layout and swap out colors if (oh let's be honest, that's a when) I want to shake things up
 .alt__content-blocks {
-  background: var(--bg__white-05);
+  background: var(--generic__alt-blocks-bg);
 
   @media screen and (min-width:800px) {
     display: grid; 
@@ -33,12 +33,12 @@
   
      &:nth-of-type(odd) { 
          grid-column: 2 / 6;
-         background: linear-gradient(to right, var(--bg__white-02), transparent);
+         background: linear-gradient(to right, var(--generic__alt-blocks-bg-odd), transparent);
          
      }
      &:nth-of-type(even) { 
          grid-column: 3 / 7;
-         background: linear-gradient(to left, var(--bg__white-02), transparent);
+         background: linear-gradient(to left, var(--generic__alt-blocks-bg-even), transparent);
      }
 
      @media screen and (min-width: 800px) {

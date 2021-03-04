@@ -8,7 +8,7 @@
 <?php if ( comments_open() && ! post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
 
-<footer class="footer">
+<footer class="post__footer">
 <?php get_template_part( 'nav', 'below-single' ); ?>
 </footer>
 

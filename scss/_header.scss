@@ -23,12 +23,12 @@ header {
   align-items: stretch;
 
   @media screen and (min-width: 769px) {
-    background: var(--header__logo--bg);
+    background: var(--header__logo-bg);
   }
   
 
   a {
-    color: var(--header__logo--a);
+    color: var(--header__logo-a);
     font-weight: 400; // undoes the default a tag.
     text-align: center;
     display: flex;
@@ -41,18 +41,18 @@ header {
 
     // coloring the initials.
     .header__logo--initials {
-      color: var(--header__logo--initials); // as we're swapping colors below, only 2 variables are being used.
+      color: var(--header__logo-initials); // as we're swapping colors below, only 2 variables are being used.
       transition: 0.5s color;
 
     }
 
     @include hover() {
-     color: var(--header__logo--initials);
+     color: var(--header__logo-initials);
      background: var(--header__logo-bg--hover);
 
       // so the span changes color when the entire a-tag is hovered.
       .header__logo--initials {
-        color: var(--header__logo--a);
+        color: var(--header__logo-a);
       }
     }
 
@@ -62,7 +62,7 @@ header {
       text-decoration: none;
 
       @include hover() {
-        color: var(--header__logo--initials);
+        color: var(--header__logo-initials);
 
       }
     }
@@ -83,7 +83,7 @@ header {
   z-index: 2; // so our links are clickable
   right: 0;
   top: 72px; // height of the nav on mobile and desktop
-  background: var(--bg__white-09);
+  background: var(--theme-swapper__bg);
   font-family: 'Advent Pro', sans-serif;
   padding: 0.5rem;
   box-shadow: 0 0 2px var(--theme-swapper__shadow);

@@ -1,35 +1,36 @@
 // on play category's single page. 
 
 .single-post article.category-play {
-  background: var(--bg__white-05);
 
     header {
-      background: var(--bg__play-pg); // because we're changing the bg on the parent
-      h1 {
-        color: var(--title__highlight);
-      }
+      background: var(--play__header-bg); // because we're changing the bg on the parent
+      color: var(--play__title-color);
+    }
+
+    .post__bg {
+      background: var(--play__post-bg);
     }
 
     p,
     blockquote p {
       width: 100%;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
       padding: 2rem;
 
       &:nth-of-type(odd) { 
         grid-column: 2 / 6;
-        background: linear-gradient(to right, var(--bg__white-02), transparent);
+        background: linear-gradient(to right, var(--play__paragraph-bg), transparent);
         
       }
       &:nth-of-type(even) { 
         grid-column: 3 / 7;
-        background: linear-gradient(to left, var(--bg__white-02), transparent);
+        background: linear-gradient(to left, var(--play__paragraph-bg), transparent);
       }
     }
  
     blockquote.wp-block-quote {
-      background: var(--bg__white-02);
+      background: var(--play__blockq-bg);
       @include edge-buffer;
       p {
         background: transparent;

@@ -47,7 +47,8 @@ img {
 }
 
 // screen reader
-.sr-text {
+.sr-text,
+.screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
@@ -60,7 +61,8 @@ img {
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-.sr-text:focus {
+.sr-text:focus,
+screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);

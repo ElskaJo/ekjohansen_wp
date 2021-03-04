@@ -1,4 +1,3 @@
-<p class="entry-meta">
-    <!-- <span class="author vcard">by: <?php the_author_posts_link(); ?></span> -->
+<p class="post__meta">
     <span class="entry-date"><?php the_time( get_option( 'date_format' ) ); ?></span>
 </p>

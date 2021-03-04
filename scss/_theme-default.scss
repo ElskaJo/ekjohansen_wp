@@ -1,0 +1,148 @@
+// the soft greenish theme
+// now, as default will always be a class on the body tag, we only need to move over variables that will actually be changed. a lot of these may not, initially. But I have a thing for color, I know I'll add at least one pink in the future. Gir's gotta be prepared.
+
+.default {
+
+    --body-bg-color: #{$green-base};
+    --body-txt: #{$black};
+
+    // header bg 
+    --header__bg-base: #{$header-green};
+    --header__bg: rgba(255,255,255,0.7);
+
+    // name/logo
+    --header__logo-a: #{$black}; 
+    --header__logo-initials: #{$white}; 
+    --header__logo-bg: rgba(255,255,255,0.4); // alt bg could be this creamier yellow: fde395
+    --header__logo-bg--hover: #{$yellow-base};
+
+    // here we're going to change this on desktop, because the header's lighter. 
+    @media screen and (min-width: 800px) {
+      --header__logo-initials: #{$pigeon-grey}; 
+    }
+
+    // setting up all focus style. 
+    --focus__outline-color: #000;
+
+    // nav
+    --nav__a: #{$black};
+    --nav__a-underline: #{$black};
+    --nav__a-hover: inherit;
+    --nav__a-bg--hover: #{$yellow-base};
+
+    // mobile menu 
+    --nav__mobile-bg: #{$dove-grey};
+    --nav__mobile-bg--active: #{$dove-grey};
+
+    // mobile button. 
+    --nav__mobile-button-bg: rgba(255,255,255,0.4); 
+    --nav__mobile-button--active: #{$dove-grey};
+    --nav__mobile--button--focus: #{$dove-grey};
+    --nav__mobile-button-link: #{$black};
+    
+    // for our little theme swapper : note that shadow values are in light
+    --theme-swapper__bg: rgba(255,255,255,0.9);
+
+    // text links in body 
+    --link__color: #{$black};
+    --link__bg: #{$yellow-base};
+    --link__underline: inherit;
+    --link__bg--focus: #{$yellow-base};
+    --link__txt--focus: inherit;
+
+    // for the faux buttons
+    --textlink__btn-bg: #{$yellow-base};
+    --textlink__btn-bg--hover: #F6E2A6; 
+
+  // grids, used on the homepage, what i do and about pgs.
+    --home__intro-bg: rgba(255,255,255,0.2);
+    --home__intro-title-color: inherit;
+
+    --home__work-bg: rgba(255,255,255,0.8);
+    --home__work-title-color: inherit;
+
+    --home__play-bg: rgba(255,255,255,0.6);
+    --home__play-title-color: inherit;
+
+    --home__retro-bg: rgba(255,255,255,0.4);
+    --home__retro-title-color: inherit;
+    --home__retro-txt-color: inherit;
+
+    --work-grid__intro-bg: rgba(255,255,255,0.6);
+    --work-grid__intro-txtcolor: inherit;
+    --work-grid__intro-title-color: inherit;
+
+    --work-grid__highlight-bg: rgba(255,255,255,0.4);
+    --work-grid__highlight-txtcolor: inherit;
+    --work-grid__highlight-title-color: inherit;
+
+    --work-grid__sidebar-bg: rgba(255,255,255,0.2);
+    --work-grid__sidebar-txtcolor: inherit;
+    --work-grid__sidebar-title-color: inherit;
+
+    --work-grid__play-bg: rgba(255,255,255,0.6);
+    --work-grid__play-txtcolor: inherit;
+    --work-grid__play-title-color: inherit;
+
+    --work-grid__skills-bg: rgba(0,0,0,0.4);
+    --work-grid__skills-txtcolor: white;
+    --work-grid__skills-title-color: #{$yellow-base};
+
+    
+    --work-grid__study-bg: rgba(255,255,255,0.4);
+    --work-grid__study-txtcolor: inherit;
+    --work-grid__study-title-color: inherit;
+
+    --work-grid__more-bg: rgba(255,255,255,0.6);
+    --work-grid__more-txtcolor: inherit;
+
+    --work-grid__learning-bg: rgba(255,255,255,0.2);
+    --work-grid__learning-txtcolor: inherit;
+    --work-grid__learning-title-color: inherit; 
+
+    // generic page settings
+    --generic__header-bg: rgba(255,255,255,0.2);
+    --generic__title-color: inherit;
+    --generic__alt-blocks-bg: rgba(255,255,255,0.5);
+    --generic__alt-blocks-bg-odd: rgba(255,255,255,0.2);
+    --generic__alt-blocks-bg-even: rgba(255,255,255,0.2);
+     
+    // play category pages and matching post pages.
+    --play__header-bg: rgba(255,255,255,0.2);
+    --play__title-color: inherit;
+    --play__post-bg: rgba(255,255,255,0.5);
+    --play__post-blocks-bg-odd: rgba(255,255,255,0.5);
+    --play__post-blocks-bg-even: rgba(255,255,255,0.2);
+    --play__post-blocks-bg-alt: rgba(255,255,255,0.2);
+    --play__paragraph-bg: rgba(255,255,255,0.2);
+    --play__blockq-bg: rgba(255,255,255,0.2);
+
+    // retro category pages and matching post pages. 
+    --retro__header-bg: rgba(255,255,255,0.4);
+    --retro__title-color: inherit;
+    --retro__post-bg: rgba(255,255,255,0.4);
+    --retro__post-blocks-bg-odd: rgba(255,255,255,0.5);
+    --retro__post-blocks-bg-even: rgba(255,255,255,0.2);
+    --retro__post-blocks-bg-alt: rgba(255,255,255,0.2);
+    --retro__story-bg: rgba(255,255,255,0.4);
+    --retro__highlights-bg: rgba(255,255,255,0.6);
+    --retro__paragraph-bg: rgba(255,255,255,0.2);
+
+    // work category pages and matching post pages. 
+    --work__header-bg: rgba(255,255,255,0.6);
+    --work__title-color: inherit;
+    --work__post-bg: rgba(255,255,255,0.3);
+    --work__post-blocks-bg-odd: rgba(255,255,255,0.5);
+    --work__post-blocks-bg-even: rgba(255,255,255,0.2);
+    --work__post-blocks-bg-alt: rgba(255,255,255,0.2);
+
+    // footer colors. 
+    --footer__block-bg-odd: rgba(255,255,255,0.4);
+    --footer__block-txt-odd: inherit;
+    --footer__block-bg-even: rgba(255,255,255,0.2);
+    --footer__block-txt-odd: inherit;
+
+    // list bullets because holy god i can style these now
+    --list__brace: #{$yellow-base};
+
+}

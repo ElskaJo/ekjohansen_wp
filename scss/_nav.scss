@@ -15,7 +15,7 @@ nav {
   // the menu toggle that we hide on desktop. 
   button#header__nav-toggle {
     color: var(--nav__a);
-    background: var(--nav__mobile--button-bg);
+    background: var(--nav__mobile-button-bg);
     border: 0;
     padding: 1.56rem 1.25rem;
   
@@ -49,12 +49,12 @@ nav {
     // for the focus state, overwriting the browser defaults. we still highlight it, but it's no longer a big orange ring
     &:focus {
       outline: 0;
-      background: var(--nav__mobile--button-focus);
+      background: var(--nav__mobile--button--focus);
     }
   
    // and when expanded: 
    &[aria-expanded="true"] {
-     background: var(--nav__mobile--button-active);
+     background: var(--nav__mobile-button--active);
      border-radius: 0;
    
   
@@ -104,13 +104,13 @@ nav {
       align-items: center; // horizontally centering, as we've switched the direction to colummn.
       justify-content: center; // and vertically centering.
     // otherwise space between leaves us with way too much unbalanced whitespace.
-      background: var(--nav__mobile--bg);
+      background: var(--nav__mobile-bg);
       
   
       &.is-active {
         height: calc(100% - 95px);
         overflow: scroll; // in case we end up with more stuffs.
-        background: var(--nav__mobile--bg);
+        background: var(--nav__mobile-bg);
         align-items: stretch; // so the li and a span the width of the container
   
         li {

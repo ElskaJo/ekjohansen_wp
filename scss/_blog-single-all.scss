@@ -3,7 +3,7 @@
 // GOAL: retro, play, and work all have differing layouts, possibly. so that a user can tell which category they're in, based on layout. that sounds insane, writing it out right now but I'm on T3s. So the insanity could all be mine. 
 
 
-// main class, and universal truths for all content in each page, regardless of category.
+// main class, and universal truths for all content in each post, regardless of category.
 .post__single {
     position: relative;
     // header and h1 specs are in blog-categories, as they share styles.
@@ -13,5 +13,24 @@
         width: 100%;
         max-width: 100%;
         height: auto;
+    }
+}
+
+// for the meta (date, time, author etc)
+.post__meta {
+    font-size: 0.9rem;
+}
+
+// for now. Need a prettier solution to this.
+.post__footer {
+    nav, .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        div {
+            margin: 0 1rem;
+        }
     }
 }

@@ -26,10 +26,12 @@ footer {
 
   //let's try something here. 
   &:nth-of-type(odd) {
-    background: var(--bg__white-04);
+    background: var(--footer__block-bg-odd);
+    color: var(--footer__block-txt-odd);
   }
   &:nth-of-type(even) {
-    background: var(--bg__white-02);
+    background: var(--footer__block-bg-even);
+    color: var(--footer__block-txt-even);
   }
 
   // styling wp's default menu for the footer.
