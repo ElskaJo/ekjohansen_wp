@@ -1,43 +1,46 @@
 // the soft greenish theme
 // now, as default will always be a class on the body tag, we only need to move over variables that will actually be changed. a lot of these may not, initially. But I have a thing for color, I know I'll add at least one pink in the future. Gir's gotta be prepared.
 
+$black: #000000;
+$white: #ffffff;
+
 .default {
 
-    --body-bg-color: #{$green-base};
+    --body-bg-color: #91B4B2;
     --body-txt: #{$black};
 
     // header bg 
-    --header__bg-base: #{$header-green};
+    --header__bg-base: #8cb3b1;
     --header__bg: rgba(255,255,255,0.7);
 
     // name/logo
     --header__logo-a: #{$black}; 
-    --header__logo-initials: #{$white}; 
+    --header__logo-initials: #ffffff; 
     --header__logo-bg: rgba(255,255,255,0.4); // alt bg could be this creamier yellow: fde395
-    --header__logo-bg--hover: #{$yellow-base};
+    --header__logo-bg--hover: #e9c765;
 
     // here we're going to change this on desktop, because the header's lighter. 
     @media screen and (min-width: 800px) {
-      --header__logo-initials: #{$pigeon-grey}; 
+      --header__logo-initials: #5C5C5C;
     }
 
     // setting up all focus style. 
-    --focus__outline-color: #000;
+    --focus__outline-color: #{$black};
 
     // nav
     --nav__a: #{$black};
     --nav__a-underline: #{$black};
     --nav__a-hover: inherit;
-    --nav__a-bg--hover: #{$yellow-base};
+    --nav__a-bg--hover: #e9c765;
 
     // mobile menu 
-    --nav__mobile-bg: #{$dove-grey};
-    --nav__mobile-bg--active: #{$dove-grey};
+    --nav__mobile-bg: #e2e7e7;
+    --nav__mobile-bg--active: #e2e7e7;
 
     // mobile button. 
     --nav__mobile-button-bg: rgba(255,255,255,0.4); 
-    --nav__mobile-button--active: #{$dove-grey};
-    --nav__mobile--button--focus: #{$dove-grey};
+    --nav__mobile-button--active: #e2e7e7;
+    --nav__mobile--button--focus: #e2e7e7;
     --nav__mobile-button-link: #{$black};
     
     // for our little theme swapper : note that shadow values are in light
@@ -45,14 +48,15 @@
 
     // text links in body 
     --link__color: #{$black};
-    --link__bg: #{$yellow-base};
+    --link__bg: #e9c765;
     --link__underline: inherit;
-    --link__bg--focus: #{$yellow-base};
+    --link__bg--focus: #e9c765;
     --link__txt--focus: inherit;
 
     // for the faux buttons
-    --textlink__btn-bg: #{$yellow-base};
+    --textlink__btn-bg: #e9c765;
     --textlink__btn-bg--hover: #F6E2A6; 
+    --textlink__widths-color--hover: inherit;
 
   // grids, used on the homepage, what i do and about pgs.
     --home__intro-bg: rgba(255,255,255,0.2);
@@ -72,7 +76,7 @@
     --work-grid__intro-txtcolor: inherit;
     --work-grid__intro-title-color: inherit;
 
-    --work-grid__highlight-bg: rgba(255,255,255,0.4);
+    --work-grid__highlight-bg: transparent;
     --work-grid__highlight-txtcolor: inherit;
     --work-grid__highlight-title-color: inherit;
 
@@ -84,9 +88,9 @@
     --work-grid__play-txtcolor: inherit;
     --work-grid__play-title-color: inherit;
 
-    --work-grid__skills-bg: rgba(0,0,0,0.4);
-    --work-grid__skills-txtcolor: white;
-    --work-grid__skills-title-color: #{$yellow-base};
+    --work-grid__skills-bg: rgba(255,255,255,0.25);
+    --work-grid__skills-txtcolor: inherit;
+    --work-grid__skills-title-color: inherit;
 
     
     --work-grid__study-bg: rgba(255,255,255,0.4);
@@ -140,12 +144,13 @@
     --post-comments__border: rgba(255,255,255,0.2);
 
     // footer colors. 
+    --footer__top-border: rgba(0,0,0,0.1);
     --footer__block-bg-odd: rgba(255,255,255,0.4);
     --footer__block-txt-odd: inherit;
     --footer__block-bg-even: rgba(255,255,255,0.2);
     --footer__block-txt-odd: inherit;
 
     // list bullets because holy god i can style these now
-    --list__brace: #{$yellow-base};
+    --list__brace: #{$black};
 
 }

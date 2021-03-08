@@ -22,12 +22,18 @@ with others.
 */
 
 @import 'variables';
+@import 'theme-default';
+@import 'theme-light';
+@import 'theme-dark';
+
+
 @import 'reset';
 
 @import 'mixins';
 @import 'baseline_items';
 @import 'typography';
 @import 'buttons-links';
+@import 'forms';
 
 // now for page elements/pages.
 @import 'global'; // sets up all top level tags, layout elements.
@@ -49,7 +55,4 @@ with others.
 
 @import 'footer';
 
-@import 'theme-default';
-@import 'theme-light';
-@import 'theme-dark';
 /* colors checked against this WebAIM contrast checker. https://webaim.org/resources/contrastchecker/ */

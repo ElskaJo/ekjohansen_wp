@@ -1,31 +1,41 @@
+// variables used below. useful if we need to change a colorin multiple places, without having to hunt around for it. rgbas are not included in this, as we don't run the risk of contrasting a warm with a cool color.
+$spring-green: #a0c977;
+$pale-blue: #97d7fc;
+$mouse-ears: #3b3b3b;
+$mist-grey: #f0efef;
+$late-day-sun: #e9c765;
+$dark-cave: #1b1b1b;
+
+
+
 // dark. ish.
 .dark {
 
-    --body-bg-color: #1b1b1b;
+    --body-bg-color: #{$dark-cave};
     --body-txt: #{$white};
     --body-txt-highlight: #{$spring-green};
   
     // header bg 
-    --header__bg-base: black;
-    --header__bg: #3b3b3b;
+    --header__bg-base: #{$black};
+    --header__bg: #{$mouse-ears};
 
      // name/logo
      --header__logo-bg: rgba(0,0,0,0.4);
      --header__logo-bg--hover: #{$black};
-     --header__logo-a: #f0efef; // white last name // white hover for initials
+     --header__logo-a: #{$mist-grey}; // white last name // white hover for initials
      --header__logo-initials: #{$pale-blue}; // white initials // white hover for last name
   
     // changes to nav.
     --nav__a: #{$pale-blue};
-    --nav__a-bg--hover: #215872;
+    --nav__a-bg--hover: #{$black};
 
     // mobile menu 
-    --nav__mobile-bg: #3b3b3b;
+    --nav__mobile-bg: #{$mouse-ears};
     --nav__mobile-bg--active: #92ccc8;
   
     // mobile button. 
-    --nav__mobile-button-bg: #3b3b3b;
-    --nav__mobile-button--active: #3b3b3b;
+    --nav__mobile-button-bg: #{$mouse-ears};
+    --nav__mobile-button--active: #{$mouse-ears};
     --nav__mobile--button--focus: #202020;
     --nav__mobile-button-link: #{$pale-blue};
   
@@ -41,9 +51,10 @@
     --link__txt--focus: #{$pale-blue};
   
       // for the faux buttons 
-    --textlink__widths-color: #{$white};
-    --textlink__btn-bg: #21759b;
-    --textlink__btn-bg--hover: #215872;
+    --textlink__widths-color: #{$pale-blue};
+    --textlink__btn-bg: #{$black};
+    --textlink__btn-bg--hover: #{$pale-blue};
+    --textlink__widths-color--hover: #{$black};
   
     /// grids, used on the homepage, what i do and about pgs.
     --home__intro-bg: rgba(255,255,255, 0.07);
@@ -67,20 +78,20 @@
     --work-grid__learning-bg: rgba(255,255,255,0.07);
 
     // generic page settings
-    --generic__header-bg: rgba(255,255,255, 0.06);
-    --generic__alt-blocks-bg: rgba(255,255,255, 0.12);
-    --generic__alt-blocks-bg-odd: rgba(255,255,255, 0.06);
-    --generic__alt-blocks-bg-even: rgba(255,255,255, 0.06);
+    --generic__header-bg: rgba(255,255,255,0.06);
+    --generic__alt-blocks-bg: rgba(255,255,255,0.12);
+    --generic__alt-blocks-bg-odd: rgba(255,255,255,0.06);
+    --generic__alt-blocks-bg-even: rgba(255,255,255,0.03);
 
     // play category pages and matching post pages.
-    --play__header-bg: rgba(0,0,0, 0.2);
-    --play__title-color: #e9c765;
+    --play__header-bg: rgba(0,0,0,0.2);
+    --play__title-color: #{$late-day-sun};
     --play__post-bg: rgba(0,0,0,0.05);
     --play__post-blocks-bg-odd: rgba(255,255,255,0.15);
     --play__post-blocks-bg-even: rgba(255,255,255,0.2);
     --play__post-blocks-bg-alt: rgba(255,255,255,0.12);
-    --play__paragraph-bg: rgba(255,255,255, 0.02);
-    --play__blockq-bg: rgba(255,255,255, 0.06);
+    --play__paragraph-bg: rgba(255,255,255,0.02);
+    --play__blockq-bg: rgba(255,255,255,0.06);
 
     // retro category pages and matching post pages.
     --retro__header-bg: rgba(0,0,0,0.1);

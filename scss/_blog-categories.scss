@@ -46,6 +46,10 @@
 
             a {
                 background: transparent; // removing the emphasis underline from general text 
+
+                @include hover {
+                    color: inherit;
+                }
             }
         }
 

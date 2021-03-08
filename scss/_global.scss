@@ -13,7 +13,6 @@ body {
   display: flex; // required for sinking footer.
   flex-direction: column; // required for sinking footer.
   background: var(--body-bg-color);
-
 }
 
 main {
@@ -53,7 +52,6 @@ ul {
   }
 }
 
-
 // very possibly for changing widths on pages that are laid out with grid. 
   .full-width {
     grid-column: 1 / 12;
@@ -63,5 +61,8 @@ ul {
   .mid-width {
     grid-column: 2 / 10;
   }
+
+
+
 
 

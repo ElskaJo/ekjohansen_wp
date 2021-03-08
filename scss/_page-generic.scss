@@ -9,7 +9,7 @@
 
     p {
       width: 100%; // so it actually reaches all 600px.
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
       @include edge-buffer;
 
@@ -53,5 +53,16 @@
     p {
       max-width: 100%;
     }
+  }
+}
+
+// for a possible generic flex layout -- used on the 404 page right now. 
+.generic__missing-page {
+  display: flex;
+  flex: 1;
+
+  // grr. need to find out why the grid isn't filling up the flex box. 
+  article {
+    width: 100%;
   }
 }

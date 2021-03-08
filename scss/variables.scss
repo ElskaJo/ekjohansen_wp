@@ -5,45 +5,17 @@
 // I'm going to assign base variable colors, and where needed, change the value
 // based on body class. That way, ie can see it, and we can still do what we need to. 
 
-// baseline colors. All of them. 
-
-// the hues. used in divs to give us differing hues of the bg. 
-// note to self: rename these at a later date. 
-$white-09: rgba(255,255,255,0.9);
-$white-08: rgba(255,255,255,0.8);
-$white-07: rgba(255,255,255,0.7);
-$white-06: rgba(255,255,255,0.6);
-$white-05: rgba(255,255,255,0.5);
-$white-04: rgba(255,255,255,0.4);
-$white-02: rgba(255,255,255,0.2);
-$white-01: rgba(255,255,255,0.1);
-
-$black-09: rgba(0,0,0,0.9);
-$black-08: rgba(0,0,0,0.8);
-$black-07: rgba(0,0,0,0.7);
-$black-06: rgba(0,0,0,0.6);
-$black-05: rgba(0,0,0,0.5);
-$black-04: rgba(0,0,0,0.4);
-$black-02: rgba(0,0,0,0.2);
-$black-01: rgba(0,0,0,0.1);
-
+// i dunno if i'm keeping this at all now. 
 
 $black: #000000;
 $white: #ffffff;
 
 
 // for default colorscheme: 
-$dove-grey: #e2e7e7;
-$pigeon-grey: #5C5C5C;
-$green-base: #6e9f9c; // this is changed via rgba bgs laid over in either black or white.
-$header-green: #8cb3b1;
 
-$yellow-base: #e9c765; // primary accent color
-$yellow-lghtr: #f3eacf;
-$orange-base: #ff4800;
 
-$pale-blue: #7dcefd;
-$spring-green: #a0c977;
+
+
 
 // a pretty blue, change the body bg color and site follows suit. #87adc8
 // and a pink that looks nice #fa6fa2, 930337

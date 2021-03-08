@@ -25,7 +25,7 @@
         padding: 1rem 2rem 2rem;
 
         &.textlink__fullwidth {
-          @include edge-buffer;
+          padding: 0; // we let the a do all the padding
         }
     }
  
@@ -57,6 +57,12 @@
       "highlight highlight highlight sidebar sidebar"
       "skills skills study study study"
       "learning learning learning more more";
+    }
+
+    &.small-grid {
+      grid-template-areas: 
+      "left-block left-block right-block right-block right-block"
+      "left-block left-block right-b-block right-b-block right-b-block";
     }
   }
 }

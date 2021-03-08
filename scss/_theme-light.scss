@@ -1,5 +1,7 @@
-// white. obviously
-// if there are any variables missing here, it's because they're inherited from the default, and don't need to be changed.
+// light theme. which i should know by the name, but ya know, some mornings do not start with enough coffee. 
+
+$twilight-bluebird: #21759b;
+
 .light {
 
     --body-bg-color: #e6f2f8;
@@ -9,9 +11,9 @@
 
     // name/logo 
     --header__logo-a: rgb(43, 42, 42);
-    --header__logo-initials: #21759b;
+    --header__logo-initials: #{$twilight-bluebird};
     --header__logo-bg: #1f4a5e;
-    --header__logo-bg--hover: #21759b;
+    --header__logo-bg--hover: #{$twilight-bluebird};
   
     // here we're going to change this on desktop, because the header's darker. 
     @media screen and (min-width: 800px) {
@@ -22,7 +24,7 @@
     // changes to nav. 
     --nav__a: #21759b;
     --nav__a-hover: #{$white};
-    --nav__a-bg--hover: #21759b;
+    --nav__a-bg--hover: #{$twilight-bluebird};
   
     // mobile menu 
     --nav__mobile-bg: #e6f2f8;
@@ -40,13 +42,14 @@
   
     // text links
     --link__bg: rgba(160,217,249,0.9);
-    --link__bg--focus: #21759b;
+    --link__bg--focus: #{$twilight-bluebird};
     --link__txt--focus: #{$white};
 
     // when a text link mimics a button, and the faux buttons
     --textlink__widths-color: #{$white};
-    --textlink__btn-bg: #21759b;
+    --textlink__btn-bg: #{$twilight-bluebird};
     --textlink__btn-bg--hover: #1f4a5e;
+    --textlink__widths-color--hover: #{$white};
 
     // grids, used on the homepage, what i do and about pgs.
     --home__intro-bg: rgba(211,232,242, 0.6);
@@ -59,7 +62,7 @@
     --work-grid__highlight-bg: rgba(169,214,237, 0.6);
 
     --work-grid__skills-bg: rgba(33, 116, 155, 0.35);
-    --work-grid__skills-txtcolor: #000000;
+    --work-grid__skills-txtcolor: #{$black};
     --work-grid__skills-title-color: #0D3344;
 
     --work-grid__study-bg: rgba(169,214,237, 0.4);
@@ -93,6 +96,7 @@
     --post-comments__border: rgba(169,214,237, 0.6);
 
     // footer colors.
+    --footer__top-border: rgba(33, 116, 155, 0.35);
     --footer__block-bg-odd: rgba(169,214,237, 0.4);
     --footer__block-bg-even: rgba(211,232,242, 0.6);
     

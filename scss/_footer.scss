@@ -3,6 +3,8 @@ footer {
   display: flex; 
   justify-content: space-between;
   flex-direction: column;
+  // trying something out here. 
+  border-top: 2rem solid var(--footer__top-border);
   
   @media screen and (min-width: 768px) {
     flex-direction: row;
