@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<main class="global__home" role="main">
+<main class="global__home" id="content" role="main">
     <article class="primary-grid home-grid">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>

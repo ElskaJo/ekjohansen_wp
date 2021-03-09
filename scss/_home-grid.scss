@@ -3,6 +3,7 @@
 
 .home-grid__about {
   grid-area: about;
+  background: var(--home__about-bg);
 }
 
 .home-grid__intro {
@@ -52,7 +53,7 @@
         align-items: stretch;
         justify-content: space-between;
         flex-direction: column; 
-
+    
         @media screen and (min-width:600px) {
             flex-direction: row;
         }
@@ -60,10 +61,15 @@
         > div {
             flex: 1; // all the same width
             margin-bottom: 2rem;
+            border: 1px dotted grey;
                      
             // restyling the h2 and p 
-            p:not(:last-of-type) {
-                @include edge-buffer;
+            p {
+                padding: 1rem 2rem;
+            }
+            h3 {
+                @include edge-buffer; 
+                line-height: 1;
             }
 
             // grr
@@ -77,8 +83,7 @@
             }
 
             @media screen and (min-width:600px) {
-                margin: 0.5rem 0.5rem 4rem;
-                border: 1px dotted grey;               
+                margin: 0.5rem 0.5rem 4rem;               
             }
 
         }

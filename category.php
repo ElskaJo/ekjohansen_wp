@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="category__landing">
+<main class="category__landing" id="content">
     <header class="category__header">
         <h1><?php single_term_title(); ?></h1>
     </header>

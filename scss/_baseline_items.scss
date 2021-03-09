@@ -8,6 +8,54 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(46, 70, 68, 1), rgba(0, 0, 0, 0));
 }
 
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+ height: auto;
+}
+
+// screen reader
+.sr-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.sr-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem; // 14px, when base is 16
+	font-weight: bold;
+	height: auto;
+	left: 0.3125rem; // 5px when base is 16
+	line-height: normal;
+	padding: 0.5rem;
+	text-decoration: none;
+	top: 0.3125rem; // 5px when base is 16
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+
+
 // Typography
 
 b, strong {

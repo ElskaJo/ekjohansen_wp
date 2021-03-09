@@ -8,6 +8,29 @@
         color: var(--retro__title-color);         
     }
 
+    p {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 2rem;
+  
+        &:nth-of-type(odd) { 
+          grid-column: 2 / 5;
+          background: linear-gradient(to right, var(--retro__paragraph-bg), transparent);
+          
+        }
+        &:nth-of-type(even) { 
+          grid-column: 2 / 5;
+          background: linear-gradient(to left, var(--retro__paragraph-bg), transparent);
+        }
+        &:first-of-type {
+            @media screen and (min-width: 768px) {
+              margin-top: -1rem;  
+            }
+            
+        }
+      }
+      
     .post__bg {
         background: var(--retro__post-bg);
 
@@ -26,34 +49,16 @@
     }
 
         // the bit that holds the story about it. 
-    .retro-story {
+    p.retro-story {
         grid-area: story;
         background: var(--retro__story-bg);
     }
 
-    .retro-highlights {
+    p.retro-highlights {
         grid-area: highlights;
         background: var(--retro__highlights-bg);
     }
     
-    p {
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 2rem;
-
-      &:nth-of-type(odd) { 
-        grid-column: 2 / 5;
-        background: linear-gradient(to right, var(--retro__paragraph-bg), transparent);
-        
-      }
-      &:nth-of-type(even) { 
-        grid-column: 2 / 5;
-        background: linear-gradient(to left, var(--retro__paragraph-bg), transparent);
-      }
-      &:first-of-type {
-          margin-top: -1rem;
-      }
-    }
+    
 
 } // ends category-retro article

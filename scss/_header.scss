@@ -5,7 +5,7 @@ header {
   justify-content: space-between;
   align-items: stretch;
   font-family: 'Advent Pro', sans-serif;
-  background: var(--header__bg-base);
+  background: var(--header__bg-mobile);
 
   @media screen and (min-width:769px) {
     background: var(--header__bg);

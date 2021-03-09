@@ -182,10 +182,14 @@ body.category-play {
 // styling WP's category description for each category landing page
 .category__landing-desc {
     padding: 2rem 0;
-
+    // adding in a bg here, so we have more control when themes switch. 
+    background: var(--category-landing__desc-bg);
     @media screen and (min-width:800px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }   
+}
+.category__landing-blocks {
+    background: var(--category-landing__blocks-bg);
 }
 

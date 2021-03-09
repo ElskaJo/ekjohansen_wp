@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="generic__missing-page" role="main">
+<main class="generic__missing-page" id="content" role="main">
     <article id="post-0" class="primary-grid small-grid">
         <header class="form__header">
             <h1 class="entry-title"><?php esc_html_e( 'Not Found', 'snowfall' ); ?></h1>

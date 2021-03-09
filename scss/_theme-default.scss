@@ -4,24 +4,31 @@
 $black: #000000;
 $white: #ffffff;
 
+$pearlescent-algae: #91B4B2;
+$late-day-sun: #e9c765;
+$dark-smoke: #252525;
+$white-lake: #e2e7e7;
+$buttermilk: #F6E2A6;
+
+
 .default {
 
-    --body-bg-color: #91B4B2;
+    --body-bg-color: #{$pearlescent-algae};
     --body-txt: #{$black};
 
     // header bg 
-    --header__bg-base: #8cb3b1;
+    --header__bg-mobile: rgba(0,0,0,0.3);
     --header__bg: rgba(255,255,255,0.7);
 
     // name/logo
     --header__logo-a: #{$black}; 
-    --header__logo-initials: #ffffff; 
+    --header__logo-initials: #{$white};
     --header__logo-bg: rgba(255,255,255,0.4); // alt bg could be this creamier yellow: fde395
-    --header__logo-bg--hover: #e9c765;
+    --header__logo-bg--hover: #{$late-day-sun};
 
     // here we're going to change this on desktop, because the header's lighter. 
     @media screen and (min-width: 800px) {
-      --header__logo-initials: #5C5C5C;
+      --header__logo-initials: #{$dark-smoke};
     }
 
     // setting up all focus style. 
@@ -31,44 +38,45 @@ $white: #ffffff;
     --nav__a: #{$black};
     --nav__a-underline: #{$black};
     --nav__a-hover: inherit;
-    --nav__a-bg--hover: #e9c765;
+    --nav__a-bg--hover: #{$late-day-sun};
 
     // mobile menu 
-    --nav__mobile-bg: #e2e7e7;
-    --nav__mobile-bg--active: #e2e7e7;
+    --nav__mobile-bg: #{$white-lake};
+    --nav__mobile-bg--active: #{$white-lake};
 
     // mobile button. 
     --nav__mobile-button-bg: rgba(255,255,255,0.4); 
-    --nav__mobile-button--active: #e2e7e7;
-    --nav__mobile--button--focus: #e2e7e7;
+    --nav__mobile-button--active: #{$white-lake};
+    --nav__mobile--button--focus: #{$white-lake};
     --nav__mobile-button-link: #{$black};
     
     // for our little theme swapper : note that shadow values are in light
-    --theme-swapper__bg: rgba(255,255,255,0.9);
+    --theme-swapper__bg: #{$white};
 
     // text links in body 
     --link__color: #{$black};
-    --link__bg: #e9c765;
+    --link__bg: #{$late-day-sun};
     --link__underline: inherit;
-    --link__bg--focus: #e9c765;
+    --link__bg--focus: #{$late-day-sun};
     --link__txt--focus: inherit;
 
     // for the faux buttons
-    --textlink__btn-bg: #e9c765;
-    --textlink__btn-bg--hover: #F6E2A6; 
-    --textlink__widths-color--hover: inherit;
+    --textlink__btn-bg: #{$late-day-sun};
+    --textlink__btn-bg--hover: #{$buttermilk};
+    --textlink__widths-color--hover: #{$black};
 
   // grids, used on the homepage, what i do and about pgs.
     --home__intro-bg: rgba(255,255,255,0.2);
     --home__intro-title-color: inherit;
+    --home__about-bg: rgba(255,255,255,0.5);
 
     --home__work-bg: rgba(255,255,255,0.8);
     --home__work-title-color: inherit;
 
-    --home__play-bg: rgba(255,255,255,0.6);
+    --home__play-bg: rgba(255,255,255,0.4);
     --home__play-title-color: inherit;
 
-    --home__retro-bg: rgba(255,255,255,0.4);
+    --home__retro-bg: rgba(255,255,255,0.2);
     --home__retro-title-color: inherit;
     --home__retro-txt-color: inherit;
 
@@ -111,6 +119,10 @@ $white: #ffffff;
     --generic__alt-blocks-bg-odd: rgba(255,255,255,0.2);
     --generic__alt-blocks-bg-even: rgba(255,255,255,0.2);
      
+    // category landing pages: all. 
+    --category-landing__desc-bg: rgba(255,255,255,0.6);
+    --category-landing__blocks-bg: rgba(255,255,255,0.6);
+
     // play category pages and matching post pages.
     --play__header-bg: rgba(255,255,255,0.2);
     --play__title-color: inherit;

@@ -10,7 +10,7 @@
 </head>
 
 <body <?php body_class('default'); ?>>
-
+<a href="#content" class="sr-text" aria-hidden="false">Skip to content</a>
 	<header id="header">
 
 		<div class="header__logo">

@@ -47,16 +47,19 @@ nav {
     }
   
     // for the focus state, overwriting the browser defaults. we still highlight it, but it's no longer a big orange ring
-    &:focus {
-      outline: 0;
+    &:focus,
+    &:focus-within {
+      outline: 2px solid var(--focus__outline-color);
       background: var(--nav__mobile--button--focus);
     }
   
-   // and when expanded: 
-   &[aria-expanded="true"] {
+    // now we make sure the x below will have an outline as well. 
+    &:focus[aria-expanded="true"] {
      background: var(--nav__mobile-button--active);
-     border-radius: 0;
-   
+      //outline: 2px solid red;
+    }
+   // and when expanded: 
+   &[aria-expanded="true"] { 
   
      // and we change how the 3 bars look when opened. they have their own classes here, because span can be a pita to manipulate 
      .header__nav-toggle--hamburger {

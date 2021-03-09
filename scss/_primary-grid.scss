@@ -8,12 +8,12 @@
      display: flex;
      flex-direction: column;
      flex: 1; // stretches the interior div, so that the buttons are correctly pushed to the bottom edge of the container. this is like heart surgery sometimes.
+   }
 
-     &:first-of-type {
-      @media screen and (max-width: 799px) {
-        padding-top: 2rem;
-      }
-     }
+   > div:first-of-type {
+    @media screen and (max-width: 799px) {
+      padding-top: 2rem;
+    }
    }
 
     // and changing it for titles in the grid
@@ -29,7 +29,6 @@
         }
     }
  
-
   // only on larger screens
   @media screen and (min-width: 800px) {
     display: grid; 

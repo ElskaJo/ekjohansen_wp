@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="post__single">
+<main class="post__single" id="content">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'entry' ); ?>

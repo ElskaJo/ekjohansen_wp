@@ -1,107 +1,117 @@
 // light theme. which i should know by the name, but ya know, some mornings do not start with enough coffee. 
 
-$twilight-bluebird: #21759b;
+$allports: #216381;
+$pattens-blue: #CFF0FF;
+$dusty-robin: #185A79;
+$astronaut-blue: #1f4a5e;
+$alice-blue: #e6f2f8;
+$whisper: #eceaea;
+$french-pass: #a2cce0;
+$orient: #175572;
+$blue-whale: #0D3344;
 
 .light {
 
-    --body-bg-color: #e6f2f8;
+    --body-bg-color: #afd6e9;//#e6f2f8;
 
-    // header bg 
-    --header__bg-base: #c2e5f5;
-
+    // header bg (for mobile) 
+    --header__bg-mobile: rgba(255,255,255,0.9);//#c2e5f5;
+    --header__bg: rgba(255,255,255,0.9);
     // name/logo 
     --header__logo-a: rgb(43, 42, 42);
-    --header__logo-initials: #{$twilight-bluebird};
-    --header__logo-bg: #1f4a5e;
-    --header__logo-bg--hover: #{$twilight-bluebird};
+    --header__logo-initials: #{allports};
+    --header__logo-bg: #{$astronaut-blue};
+    --header__logo-bg--hover: #{allports};
   
     // here we're going to change this on desktop, because the header's darker. 
     @media screen and (min-width: 800px) {
       --header__logo-initials: #{$white};
-      --header__logo-a: #87d7fc;
+      --header__logo-a: #{$pattens-blue};
     }
   
     // changes to nav. 
-    --nav__a: #21759b;
+    --nav__a: #{$dusty-robin};
     --nav__a-hover: #{$white};
-    --nav__a-bg--hover: #{$twilight-bluebird};
+    --nav__a-bg--hover: #{allports};
   
     // mobile menu 
-    --nav__mobile-bg: #e6f2f8;
-    --nav__mobile-bg--active: #eceaea;
+    --nav__mobile-bg: #{$alice-blue};
+    --nav__mobile-bg--active: #{$whisper};
   
     // mobile button. 
-    --nav__mobile-button-bg: #e6f2f8;
-    --nav__mobile-button--active: #e6f2f8;
-    --nav__mobile--button--focus: #a2cce0;
-    --nav__mobile-button-link: #175572;
+    --nav__mobile-button-bg: #{$alice-blue};
+    --nav__mobile-button--active: #{$alice-blue};
+    --nav__mobile--button--focus: #{$french-pass};
+    --nav__mobile-button-link: #{$orient};
     
      // for our little theme swapper 
     --theme-swapper__shadow: rgba(0,0,0,0.2);
     --theme-swapper__txt-link--focus: #{$white};
   
     // text links
-    --link__bg: rgba(160,217,249,0.9);
-    --link__bg--focus: #{$twilight-bluebird};
+    --link__bg: #{$dusty-robin};
+    --link__bg--focus: #{$dusty-robin};
+   //--link__color: #{$white};
     --link__txt--focus: #{$white};
 
     // when a text link mimics a button, and the faux buttons
     --textlink__widths-color: #{$white};
-    --textlink__btn-bg: #{$twilight-bluebird};
-    --textlink__btn-bg--hover: #1f4a5e;
+    --textlink__btn-bg: #{$dusty-robin};
+    --textlink__btn-bg--hover: #{$astronaut-blue};
     --textlink__widths-color--hover: #{$white};
 
     // grids, used on the homepage, what i do and about pgs.
-    --home__intro-bg: rgba(211,232,242, 0.6);
+    --home__intro-bg: rgba(255,255,255,0.5);//rgba(211,232,242, 0.6);
+    --home__about-bg: rgba(255,255,255,0.6);
+    --home__work-bg: rgba(255,255,255,0.8);
+    --home__play-bg: rgba(255,255,255,0.25);
+    --home__retro-bg: rgba(255,255,255,0.4);//rgba(169,214,237, 0.4);
 
-    --home__play-bg: rgba(255,255,255,0.5);
-    --home__retro-bg: rgba(169,214,237, 0.4);
 
-    --work-grid__intro-bg: transparent;
+    --work-grid__intro-bg: rgba(255,255,255,0.6);
+    --work-grid__highlight-bg: rgba(255,255,255,0.2);
 
-    --work-grid__highlight-bg: rgba(169,214,237, 0.6);
-
-    --work-grid__skills-bg: rgba(33, 116, 155, 0.35);
+    --work-grid__skills-bg: rgba(255,255,255,0.7);
     --work-grid__skills-txtcolor: #{$black};
-    --work-grid__skills-title-color: #0D3344;
+    --work-grid__skills-title-color: inherit;
 
-    --work-grid__study-bg: rgba(169,214,237, 0.4);
-
-    --work-grid__sidebar-bg: rgba(211,232,242, 0.6);
-
-    --work-grid__learning-bg: rgba(211,232,242, 0.6);
+    --work-grid__study-bg: rgba(255,255,255,0.5);
+    --work-grid__sidebar-bg: rgba(255,255,255,0.8);
+    --work-grid__learning-bg: rgba(255,255,255,0.6);
+    --work-grid__more-bg: rgba(255,255,255,0.8);
 
     
     // generic page settings
-    --generic__header-bg: rgba(211,232,242, 0.6);
-    --generic__alt-blocks-bg: rgba(33,117,155,0.25);
-    --generic__alt-blocks-bg-odd: rgba(211,232,242, 0.6);
-    --generic__alt-blocks-bg-even: rgba(211,232,242, 0.6);
+    --generic__header-bg:rgba(255,255,255,0.4); // rgba(33,117,155,0.25);
+    --generic__alt-blocks-bg: rgba(255,255,255,0.6); //rgba(33,117,155,0.25);
+    --generic__alt-blocks-bg-odd: rgba(255,255,255,0.4);
+    --generic__alt-blocks-bg-even: rgba(255,255,255,0.4);
 
     // play category pages and matching post pages.
-    --play__header-bg: rgba(169,214,237, 0.3);
-    --play__paragraph-bg: rgba(169,214,237, 0.4);
+    --play__header-bg: rgba(255,255,255,0.4); //rgba(169,214,237, 0.3);
+    --play__paragraph-bg: rgba(255,255,255,0.6);
     --play__blockq-bg: rgba(211,232,242, 0.6);
 
     // retro category pages and matching post pages.
-    --retro__header-bg: rgba(169,214,237, 0.5);
-    --retro__post-bg: rgba(169,214,237, 0.2);
-    --retro__story-bg: rgba(169,214,237, 0.4);
+    --retro__header-bg: rgba(255,255,255,0.4);//rgba(169,214,237, 0.5);
+    --retro__post-bg: rgba(255,255,255,0.2);
+    --retro__story-bg: rgba(255,255,255,0.6);
 
     // work category pages and matching post pages. 
-    --work__header-bg: rgba(169,214,237, 0.3);
-    --work__post-bg: rgba(169,214,237, 0.4);
+    --work__header-bg: rgba(255,255,255,0.4); //rgba(169,214,237, 0.3);
+    --work__post-bg: rgba(255,255,255,0.7);
 
     // post comments
     --post-comments__border: rgba(169,214,237, 0.6);
+    --post-comments__bg: rgba(255,255,255,0.6);
 
     // footer colors.
     --footer__top-border: rgba(33, 116, 155, 0.35);
-    --footer__block-bg-odd: rgba(169,214,237, 0.4);
-    --footer__block-bg-even: rgba(211,232,242, 0.6);
+    --footer__block-bg-odd:rgba(255,255,255,0.25); // rgba(169,214,237, 0.4);
+    --footer__block-bg-even: rgba(255,255,255,0.6);//rgba(211,232,242, 0.6);
     
   // list bullets because holy god i can style these now
-    --list__brace: #0D3344;
+    --list__brace: #{$blue-whale};
   
   }
   
