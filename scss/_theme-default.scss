@@ -60,6 +60,9 @@ $buttermilk: #F6E2A6;
     --link__bg--focus: #{$late-day-sun};
     --link__txt--focus: inherit;
 
+    // for a word or phrase we want highlighted. 
+    --typography__text-highlight: #{$late-day-sun};
+
     // for the faux buttons
     --textlink__btn-bg: #{$late-day-sun};
     --textlink__btn-bg--hover: #{$buttermilk};

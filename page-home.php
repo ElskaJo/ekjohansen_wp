@@ -48,7 +48,7 @@ get_header(); ?>
                 endif; ?>
             </div>
             <p class="textlink__fullwidth">
-                <a href="/articles/retro/">Step into the Dolorian</a>
+                <a href="/the_mind/articles/retro/">Step into the Dolorian</a>
             </p>
         </div>
     </article>

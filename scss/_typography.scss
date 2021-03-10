@@ -10,7 +10,8 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 1px;
 }
 
-h2 {
+h2,
+.primary-grid h1 {
   font-size: 3rem;
   color: inherit; // testing this out, seeing if swapping out dark to light bg and text colors can be streamlined a bit.
   text-shadow: 0 0 1px black;
@@ -30,4 +31,9 @@ p, h2 {
 //except in the footer 
 footer p {
   padding: 0.5rem 0;
+}
+
+// used on the work page to highlight courses i've finished. 
+.study-highlight {
+  background: var(--typography__text-highlight);
 }

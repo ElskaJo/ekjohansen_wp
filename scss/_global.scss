@@ -20,7 +20,8 @@ main {
 
   // default list specs. adding a class will change the marker style and color
 ul {
-  padding: 1rem 1rem 1rem 2.5rem;
+ // padding: 1rem 1rem 1rem 2.5rem;
+  padding: 0 1rem 0 2.5rem; // testing in wp to see if the p tag will give it enough space. 
   list-style-position: outside;
 
   li {
