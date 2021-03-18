@@ -121,6 +121,8 @@ $buttermilk: #F6E2A6;
     --generic__alt-blocks-bg: rgba(255,255,255,0.5);
     --generic__alt-blocks-bg-odd: rgba(255,255,255,0.2);
     --generic__alt-blocks-bg-even: rgba(255,255,255,0.2);
+    --generic__cover-bg: #{$pearlescent-algae};
+    --generic__cover-txt: #{$black};
      
     // category landing pages: all. 
     --category-landing__desc-bg: rgba(255,255,255,0.6);
@@ -135,6 +137,7 @@ $buttermilk: #F6E2A6;
     --play__post-blocks-bg-alt: rgba(255,255,255,0.2);
     --play__paragraph-bg: rgba(255,255,255,0.2);
     --play__blockq-bg: rgba(255,255,255,0.2);
+    --play__img-border: rgba(255,255,255,0.2);
 
     // retro category pages and matching post pages. 
     --retro__header-bg: rgba(255,255,255,0.4);

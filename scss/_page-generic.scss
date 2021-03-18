@@ -40,11 +40,6 @@
          grid-column: 3 / 7;
          background: linear-gradient(to left, var(--generic__alt-blocks-bg-even), transparent);
      }
-
-     @media screen and (min-width: 800px) {
-      padding: 3rem 2rem;
-      margin-top: -1rem;
-     }
   }
 
   > div {
@@ -65,4 +60,13 @@
   article {
     width: 100%;
   }
+}
+
+// applies to pages and posts, when adding a cover color with title. 
+:root .has-black-background-color {
+  background: var(--generic__cover-bg);
+  color: var(--generic__cover-txt);
+}
+.wp-block-cover .wp-block-cover__inner-container {
+  color: var(--generic__cover-txt);
 }

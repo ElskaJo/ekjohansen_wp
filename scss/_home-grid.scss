@@ -62,15 +62,19 @@
             flex: 1; // all the same width
             margin-bottom: 2rem;
             border: 1px dotted grey;
-                     
-            // restyling the h2 and p 
-            p {
-                padding: 1rem 2rem;
-            }
+                
+            // ok, I've changed how I want the home page musing titles to read. Because of course I have. 
+                
             h3 {
                 @include edge-buffer; 
                 line-height: 1;
             }
+      
+            // restyling the h2 and p 
+            p {
+                padding: 1rem 2rem;
+            }
+            
 
             // grr
             p:last-of-type {
@@ -79,7 +83,19 @@
             
             .home-grid__retro--subtitle {
                 background: transparent;
-                padding: 0 1rem;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    background: var(--textlink__btn-bg); // making these colored by default.
+                    color: var(--textlink__widths-color);
+                    
+
+                    @include hover {
+                        background: var(--textlink__btn-bg--hover);
+                        color: var(--textlink__widths-color--hover);
+                      }
+                }
             }
 
             @media screen and (min-width:600px) {

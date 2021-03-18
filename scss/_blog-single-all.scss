@@ -13,7 +13,59 @@
         width: 100%;
         max-width: 100%;
         height: auto;
+        
+        img {
+            margin: 0 auto;
+        }
     }
+    // for lists
+    ul, ol, p {
+        @include max-width;
+    }
+
+    p,
+    blockquote p {
+
+        @media screen and (min-width: 800px) {
+            padding: 3rem 2rem;
+            margin-top: -1rem;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+           }
+
+      &:nth-of-type(odd) { 
+        grid-column: 2 / 6;
+        background: linear-gradient(to right, var(--play__paragraph-bg), transparent);
+      }
+
+      &:nth-of-type(even) { 
+        grid-column: 3 / 7;
+        background: linear-gradient(to left, var(--play__paragraph-bg), transparent);
+      }
+    }
+    
+    blockquote.wp-block-quote {
+        background: var(--play__blockq-bg);
+        @include edge-buffer;
+  
+        p {
+          background: transparent;
+          @include max-width;
+        }
+      }
+
+      // for figcaptions. ok that's obvious. 
+      figcaption {
+          font-size: 0.8rem; 
+          font-style: italic; 
+          padding-left: 1rem;
+          padding-right: 1rem;
+          text-align: center;
+          margin-bottom: 0; // undoing the default
+      }
+
 }
 
 // for the meta (date, time, author etc)
@@ -48,9 +100,14 @@
 .post__comments {
     background: var(--post-comments__bg);
 
-    section {
+    section, .comment-respond {
         max-width: 700px;
-        margin: 0 auto; 
+        margin: 0 auto;
+        
+        //undoing what's universally done
+        p {
+            background: transparent;
+        }
     }
 
    .comments-title {

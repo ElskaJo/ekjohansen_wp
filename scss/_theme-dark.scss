@@ -86,6 +86,8 @@ $darkest-grey: #202020;
     --generic__alt-blocks-bg: rgba(255,255,255,0.02);
     --generic__alt-blocks-bg-odd: rgba(255,255,255,0.01);
     --generic__alt-blocks-bg-even: rgba(255,255,255,0.01);
+    --generic__cover-bg: #{$dark-cave};
+    --generic__cover-txt: #{$olivine};
 
     // category landing pages: all. 
     --category-landing__desc-bg: rgba(255,255,255,0.06);

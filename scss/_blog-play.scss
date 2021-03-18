@@ -11,34 +11,13 @@
       background: var(--play__post-bg);
     }
 
-    p,
-    blockquote p {
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 2rem;
-
-      &:nth-of-type(odd) { 
-        grid-column: 2 / 6;
-        background: linear-gradient(to right, var(--play__paragraph-bg), transparent);
-        
-      }
-      &:nth-of-type(even) { 
-        grid-column: 3 / 7;
-        background: linear-gradient(to left, var(--play__paragraph-bg), transparent);
-      }
-    }
- 
-    blockquote.wp-block-quote {
-      background: var(--play__blockq-bg);
-      @include edge-buffer;
-      p {
-        background: transparent;
-      }
-    }
-
     // so i can add an img as a cover, and not have the p's bg show
     .wp-block-cover p {
       background: transparent;
     }
+
+    // we're going to add a border to in-post images i think. testing this out at least. 
+    figure img {
+      border: 10px solid var(--play__img-border);
+  }
 }

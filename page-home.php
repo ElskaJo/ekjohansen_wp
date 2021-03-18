@@ -13,12 +13,11 @@ get_header(); ?>
 
         <!-- adding the retro blog thingy. goddamn been writing code too long today -->
         <div class="home-grid__retro">
-            <h2>Time Machine</h2>
+            <h2>Recent Musing</h2>
             <div class="home-grid__retro--snippets">
             <?php $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'retro',
                 'posts_per_page' => 3,
             );
             $arr_posts = new WP_Query( $args );
@@ -35,7 +34,9 @@ get_header(); ?>
                         endif;
                         ?>
                         <header class="home-grid__retro--subtitle">
+                        <a href="<?php the_permalink(); ?>">
                             <h3><?php the_title(); ?></h3>
+                        </a>
                         </header>
                         <div class="home-grid__retro--content">
                             <?php the_excerpt(); ?>
@@ -47,9 +48,6 @@ get_header(); ?>
                 <?php endwhile;
                 endif; ?>
             </div>
-            <p class="textlink__fullwidth">
-                <a href="/the_mind/articles/retro/">Step into the Dolorian</a>
-            </p>
         </div>
     </article>
   
