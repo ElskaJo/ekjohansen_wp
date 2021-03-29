@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136237741-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136237741-1');
+</script>
+
+  <title>EK Johansen: CSS Whisperer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CSS Whisperer, Front End Developer and UI Designer out of Vancouver, Canada">
+  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+  <link href="primary_style.css" rel="stylesheet">
+</head>
+
+<body class="default">
+  <header id="top">
+    <div class="header__logo">
+      <a href="/index-real.html"><span class="header__logo--initials">EK</span><span class="header__logo-j">J</span><span class="header__logo-mobilehide">ohansen</span></a>
+    </div>
+
+    <nav role="navigation">
+      <button id="header__nav-toggle" aria-expanded="false" aria-label="Open the menu">
+        <span class="header__nav-toggle--sr-only">Menu</span>
+        <span class="header__nav-toggle--hamburger line-1" aria-hidden="true"></span>
+        <span class="header__nav-toggle--hamburger line-2" aria-hidden="true"></span>
+        <span class="header__nav-toggle--hamburger line-3" aria-hidden="true"></span>
+      </button>
+
+      <ul class="header__nav--container" id="menu">
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="primary-grid work-grid" role="main">
+
+    <!-- adding the theme swapper -->
+    <div class="header__theme-swapper">
+      Theme Swapper: <a id="dark" href="#">dark</a>  
+      <a href="#" id="light">light</a>
+      <a href="#" id="default">reset</a>
+    </div> <!-- ends theme swapper -->
+    <!-- yes, there IS a better way to handle this swapper. However, I'm learning JS, this was the first thing I wrote from nothing, and it does the job for now. Done is better than perfect -->
+
+    <article class="work-grid__intro">
+      <h1>What I do</h1>
+      <p>CSS whisperer. Multi browser tester. Accessibility insister. Cat herder.</p>
+      <p>I bridge the gap between designers and programmers to create award-winning apps and
+        beautiful websites.</p>
+      <p>I've worked accessibility compliant HTML and CSS into AngularJS, React, .asp and PHP frameworks and am  familiar with the module & component structure of each.
+      My focus is on compatible, well commented, accessible HTML + CSS, taking the pressure
+      off your current programmers so they can do what they do best.</p>
+      <p>I love what I do, so i work hard to do it well.</p>
+      <hr>
+      <p>(As a side note, this site is in it's soft-launch stage. The HTML is now being infused with a WordPress heart and you know, surgery could go either way. Come back as it develops. Til then, play around with the theme changer, read a bit, have a snack. Make some tea. Here, have a cat.<small>February 17 2021</small>)</p>
+      <img src="/img/cropped-petunia.jpg" alt="A black and white photo of my black cat's eyes.">
+    </article>
+    
+    <article class="work-grid__highlight">
+      <p>See the places I've been, until the rest of the site launches:</p>
+      <p><a class="textlink__halfwidth" href="https://codepen.io/elska-jo" target="_blank">my codepen</a>
+      <a class="textlink__halfwidth" href="https://www.linkedin.com/in/elska-johansen" target="_blank">my linkedin</a></p>
+      <p>Or, find out more work stuff below.</p>
+    </article>
+
+    <article class="work-grid__sidebar">
+      <h2 class="page__title-box">Let's be Honest</h2>
+      <p>I started web design professionally in 1998.</p>
+      <p>A hazy time when we were all webmasters, there was no WordPress, CSS wasn't entirely supported inline, nevermind as an external file, and most sites were a mish-mash of animated gifs and inline table styles.</p>
+      <p>There is no feasible way I can show all 23 years of experience here. Can you imagine trying to show every site I've designed, or every framework I've built? And what I coded in 2002 certainly wouldn't hold up now; what was revolutionary then, is irrelevant now. </p>
+      <p>What isn't irrelevant, is how all those years of design and CSS taught me to keep learning. To expand my knowledgebase. To understand what I was working around, whether it be PHP, React, Angular or even ColdFusion back in the day, so I could build a better mousetrap around it. </p>
+      <p>Back then and for a long time, no school had any cirriculum that tackled this. We all right-clicked websites and figured out how to code this on our own.</p>
+      <p>It taught me to teach myself. Every day, every week, web dev is a constant cycle of learning, of discarding what no longer works, adapting to what our users need and what devices they use.</p>
+      <p>That is probably one of the only constants in web development; change. And the need to keep up with it.</p>
+    </article> 
+
+    <article class="work-grid__skills"> 
+      <h2>Skills</h2>
+      <ul class="global__bracket-list">
+        <li>Learning. Constantly</li>
+        <li>CSS Whisperer</li>
+        <li>HTML + accessibility writer</li>
+        <li>Wrangling stray legacy CSS + HTML</li>
+        <li>Heavily commenting my code so those that come after know what it does + why it's there</li>
+        <li>Reliably estimating and meeting deadlines</li>
+        <li>Really good Google-fu. I love research. It's a problem, I know</li>
+        <li>Code + Project documentation, including visual steps for fellow devs + training for clients of all skill levels</li>
+        <li>Versioning (git, bitbucket) with clear commit messages</li>
+        <li>Worked around Angular, React, + custom JS frameworks long enough to know what they're doing, how moduling affects CSS + consistency, + know a bit about changing what I need; enough to be dangerous. Now, I'm learning how to write vanilla JS. I'm told this will make me a monster</li>
+        <li>Clear cross-team exchange of information in the form of scrums, slack meetings; hell, pigeon carrier if it gets us all on the same page</li>
+        <li>White-labeling pre-existing projects (I once pulled inline CSS out of a ~300 pg React PoS project and white-labeled it, wrote documentation for the programmers, and kept my sanity intact)</li>
+        <li>Mentoring + taught CSS & HTML to younglings</li>
+        <li>Building WP sites, or just fixing them</li>
+        <li>Tempering career + life: everyone says this, but taking time to do things that bring me joy outside of code are important to a healthy mind. I take photography semi-seriously, love to study mythology and psychology more seriously than I probably should, and when I can again - go snowboarding</li>
+      </ul>
+    </article>
+
+    <article class="work-grid__study">
+      <h2 class="page__title-box">Study</h2>
+      <p>Courses I'm currently taking to pick up a few extra tricks.</p>
+      <hr>
+      <p><strong>Recently Completed</strong></p>
+      <ul>
+        <li>FreeCodeCamp's <a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">Responsive Web Design Certification</a>. Something I started after some time off during the pandemic, to keep my skills sharp and pick up anything new I haven't incorporated into what I do.</li>
+      </ul>
+      <p><strong>Codecademy:</strong></p>
+      <ul>
+        <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Learn JavaScript</a>. This has been a to-do for a while now. Though I learned some vanilla JS back in the 90's, and have used jQuery, I want the mind to properly pick it up.</li>
+      </ul>
+      <p><strong>Udemy:</strong></p>
+      <ul>
+        <li><a href="https://www.udemy.com/course/diploma-in-modern-applied-psychology-achology-certified/" target="_blank">Diploma in Modern Applied Psychology</a>. I took psychology years ago at uni, but I wanted to dip in again. I find it incredibly fascinating and more useful than you'd think in dev work.</li>
+        <li><a href="https://www.udemy.com/course/character-art-school-complete-character-drawing/" target="_blank">Character Art School: Complete Character Drawing Course</a>. I have always wanted to draw more, so this seemed like a good place to start. I have so many things i want to bring to life.</li>
+      </ul>
+      <p><strong>Freecodecamp.org:</strong></p>
+      <ul>
+        <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">JavaScript Algorithms & Data Structure Certification</a>. Alright, I'll admit, I started this one before actually learning the basics. I got 80% through the 'basic javascript' section when I realized where it was going, so it's on tap when I finish Codecademy's course.</li>
+      </ul>
+      <p><strong>Sites I Utilize</strong></p>
+      <p>Because learning isn't all done inside a course.</p>
+      <ul>
+        <li><a href="https://css-tricks.com/" targer="_blank">CSS Tricks:</a> This has been a solid go-to since it's inception.</li>
+        <li><a href="https://contrastchecker.com/" target="_blank">WCAG's Contrast Checker:</a> To make sure the colors used on a site adhere at least mostly to the standards set.</li>
+        <li><a href="https://stackoverflow.com/" target="_blank">StackOverflow:</a> Because often, the community is our best resource.</li>
+        <li><a href="https://caniuse.com/" target="_blank">CanIUse.com:</a> Sometimes compromises need to be made, and it's best to know how that affects your site's users. A staple.</li>
+      </ul>
+    </article>
+
+    <article class="work-grid__learning">
+      <h2>Learning by doing</h2>
+      <ul class="global__indented-list">
+        <li><strong>css-grid:</strong> I've been playing with grid on the creation of this site, experimenting with the different ways one can set up structure. When to use it, and how to use it in tandem with flex, has been so much fun.</li>
+        <li><strong>custom variables in css:</strong> This is the first time I've built a theme swapper, effectively changing the color scheme of a site by changing just a few css variables in one file. Organization and refinement is always in progress.</li>
+        <li><strong>vanilla js:</strong> I learn best by doing. So as I'm taking the Codecademy JS course, I figured out how to write the theme swapper so it would handle more than just 2 themes.</li>
+      </ul>
+    </article>
+
+    <article class="work-grid__more">
+      <p><strong>Coming soon to a browser near you.</strong></p>
+      <p>There's more coming to the site: some tech writing and code examples so I can keep track of them all, resources and a retro blog detailing adventures in 90's design and code. Also, I take a lot of pictures that I love to share. Also, cat pics are going to happen.</p>
+      <p>This is an inbetween-site. In case my dream job happens by. You have to be prepared for stuff like that. But I'm always working in the background. As with the industry, the only constant on this site, is change.</p>
+    </article>
+  </main>
+  
+  <footer>
+    <div class="footer__split-box">
+      <h3 id="contact">Contact</h3>
+      <p>elska.jo (@) gmail.com</p>
+      <p><a href="https://codepen.io/elska-jo" target="_blank">codepen</a></p>
+      <p><a href="https://www.linkedin.com/in/elska-johansen" target="_blank">linkedin</a></p>
+      <p><small>Copyright 1998 - 2020 ekjohansen.com</small></p>
+    </div>   
+  </footer>
+
+  <script type="text/javascript" src="/js/theme-toggle-code.js"></script>
+  <script type="text/javascript" src="/js/mobile-menu.js"></script>
+     
+</body>
+</html>

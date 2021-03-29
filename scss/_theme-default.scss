@@ -158,8 +158,15 @@ $buttermilk: #F6E2A6;
     --work__post-blocks-bg-even: rgba(255,255,255,0.2);
     --work__post-blocks-bg-alt: rgba(255,255,255,0.2);
 
+    // post generic elements
+    --post__single-subtitle--bg: rgba(145,180,178,0.8);
+
     // post comments
     --post-comments__border: rgba(255,255,255,0.2);
+
+    // WP default re-writes. 
+    --wp-adjust__bluish-cover-bg: rgba(255, 255, 255, 0.4);
+    --wp-adjust__bluish-cover-txt: black;
 
     // footer colors. 
     --footer__top-border: rgba(0,0,0,0.1);

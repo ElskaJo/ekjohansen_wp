@@ -1,0 +1,28 @@
+// over-writing, or entirely changing wp defaults. 
+
+
+// applies to pages and posts, when adding a cover color with title. 
+:root {
+
+    .has-black-background-color {
+      background: var(--generic__cover-bg);
+      color: var(--generic__cover-txt);
+    }
+    .wp-block-cover .wp-block-cover__inner-container {
+      color: var(--generic__cover-txt);
+    }
+  
+    // and adding for the second color, blueish grey, to customize it. 
+    .has-cyan-bluish-gray-background-color {
+      background: var(--wp-adjust__bluish-cover-bg);
+      color: var(--wp-adjust__bluish-cover-color);
+
+      h2 {
+          border: 0;
+      }
+      p {
+          background: transparent;
+          padding: 1rem 2rem;
+      }
+    }
+  } 

@@ -122,8 +122,15 @@ $darkest-grey: #202020;
     --work__post-blocks-bg-even: rgba(255,255,255,0.2);
     --work__post-blocks-bg-alt: rgba(255,255,255,0.02);
 
+    // post generic elements
+    --post__single-subtitle--bg: rgba(0,0,0,0.3);
+
     // post comments
     --post-comments__border: rgba(255,255,255,0.07);
+
+    // WP default re-writes. 
+    --wp-adjust__bluish-cover-bg: rgba(0, 0, 0, 0.4);
+    //--wp-adjust__bluish-cover-txt: black;
 
 
     --footer__block-bg-odd: rgba(255,255,255,0.1);

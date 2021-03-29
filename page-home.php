@@ -27,12 +27,13 @@ get_header(); ?>
                     $arr_posts->the_post();
                     ?>
                     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    
-                        <?php
-                        if ( has_post_thumbnail() ) :
-                            the_post_thumbnail();
-                        endif;
-                        ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php
+                            if ( has_post_thumbnail() ) :
+                                the_post_thumbnail();
+                            endif;
+                            ?>
+                        </a>
                         <header class="home-grid__retro--subtitle">
                         <a href="<?php the_permalink(); ?>">
                             <h3><?php the_title(); ?></h3>
@@ -40,9 +41,6 @@ get_header(); ?>
                         </header>
                         <div class="home-grid__retro--content">
                             <?php the_excerpt(); ?>
-                            <p class="textlink__right-clear">
-                                <a href="<?php the_permalink(); ?>">Read More</a>
-                            </p>
                         </div>
                     </div>
                 <?php endwhile;

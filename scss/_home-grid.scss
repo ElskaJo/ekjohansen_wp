@@ -4,6 +4,10 @@
 .home-grid__about {
   grid-area: about;
   background: var(--home__about-bg);
+  
+  .wp-block-image {
+      margin: 0;
+  }
 }
 
 .home-grid__intro {
@@ -43,9 +47,7 @@
         padding: 2rem 2rem 1rem; // matches the other boxes' padding
         color: var(--home__retro-title-color);
     }
-    p {
-        padding: 0;
-    }
+
 
     // the flex inside of the container 
     .home-grid__retro--snippets {
@@ -72,14 +74,14 @@
       
             // restyling the h2 and p 
             p {
-                padding: 1rem 2rem;
+                padding: 1rem;
             }
-            
 
-            // grr
-            p:last-of-type {
-                padding: 0;
+            // until i can rejig the functions file to exclude this little guy: 
+            .more-link {
+                display: none;
             }
+
             
             .home-grid__retro--subtitle {
                 background: transparent;

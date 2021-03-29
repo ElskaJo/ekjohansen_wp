@@ -73,13 +73,7 @@ if ( ! is_admin() ) {
 return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">...</a>';
 }
 }
-add_filter( 'excerpt_more', 'snowfall_excerpt_read_more_link' );
-function snowfall_excerpt_read_more_link( $more ) {
-if ( ! is_admin() ) {
-global $post;
-return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">...</a>';
-}
-}
+
 add_filter( 'intermediate_image_sizes_advanced', 'snowfall_image_insert_override' );
 function snowfall_image_insert_override( $sizes ) {
 unset( $sizes['medium_large'] );
@@ -144,10 +138,3 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
-
-/* for the theme swapper */
-// function ekj_enqueue_custom_js() {
-//     wp_enqueue_script('custom', get_stylesheet_directory_uri().'/js/theme-changer.js', array(), false, true);
-//     wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/mobile-menu.js', array(), false, true );
-// }
-// add_action('wp_enqueue_scripts', 'ekj_enqueue_custom_js');

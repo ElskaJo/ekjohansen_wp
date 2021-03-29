@@ -8,23 +8,22 @@
     position: relative;
     // header and h1 specs are in blog-categories, as they share styles.
 
-    // class the featured image is in, on all pages. 
-    .post__img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        
-        img {
-            margin: 0 auto;
-        }
+    // the featured image as a background: 
+    .post__featured-img {
+        grid-column: 1 / 6;
+        height: calc(0.564 * 100vw);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
     }
+
     // for lists
     ul, ol, p {
         @include max-width;
     }
 
     p,
-    blockquote p {
+    blockquote p  {
 
         @media screen and (min-width: 800px) {
             padding: 3rem 2rem;
@@ -36,14 +35,22 @@
            }
 
       &:nth-of-type(odd) { 
-        grid-column: 2 / 6;
+       // grid-column: 2 / 6;
         background: linear-gradient(to right, var(--play__paragraph-bg), transparent);
       }
 
       &:nth-of-type(even) { 
-        grid-column: 3 / 7;
+       // grid-column: 3 / 7;
         background: linear-gradient(to left, var(--play__paragraph-bg), transparent);
       }
+    }
+    // changing the gradient for h2s, as I don't want it there. 
+    h2 {
+        background: transparent;
+        border-bottom: 10px solid var(--post__single-subtitle--bg);
+        padding: 2rem 1rem 0;
+        margin-bottom: 1rem;
+        text-align: center;
     }
     
     blockquote.wp-block-quote {
