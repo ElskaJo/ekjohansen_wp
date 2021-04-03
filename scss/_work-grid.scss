@@ -48,7 +48,7 @@
     }
     .work-grid__skillstwo {
       grid-area: skillstwo;
-      padding: 1rem 1rem 2rem 0;
+      padding: 1rem 1rem 1rem 0;
     }
 
     .work-grid__pictwo {
@@ -70,12 +70,13 @@
       grid-area: study;
       background: var(--work-grid__study-bg);
       color: var(--work-grid__study-txtcolor);
+      padding-bottom: 2rem; // as this has a list within
 
       h2 {
         color: var(--work-grid__study-title-color);
       }
       p:last-of-type {
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
       }
     }
 

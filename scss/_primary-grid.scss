@@ -12,17 +12,17 @@
 
    > div:first-of-type {
     @media screen and (max-width: 799px) {
-      padding-top: 2rem;
+      padding-top: 2.5rem;
     }
    }
 
     // and changing it for titles in the grid
     h2, h1 {
-      padding: 2rem 2rem 1rem;
+      padding: 2.5rem 2rem 1rem;
     }
 
     p:last-of-type {
-        padding: 1rem 2rem 2rem;
+        padding: 1.5rem 2.5rem 2.5rem;
 
         &.textlink__fullwidth {
           padding: 0; // we let the a do all the padding
