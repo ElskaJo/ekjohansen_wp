@@ -32,13 +32,10 @@
       } 
     }
 
-    .work-grid__play {
-      grid-area: play;
+    .work-grid__picone {
+      grid-area: picone;
       background: var(--work-grid__play-bg);
       color: var(--work-grid__play-txtcolor);
-      h2 {
-        color: var(--work-grid__play-title-color);
-      }
     }
 
     .work-grid__skills {
@@ -49,17 +46,41 @@
         color: var(--work-grid__skills-title-color);
       }
     }
+    .work-grid__skillstwo {
+      grid-area: skillstwo;
+      padding: 1rem 1rem 2rem 0;
+    }
+
+    .work-grid__pictwo {
+      grid-area: pictwo;
+     div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        @media screen and (min-width:800px) {
+          justify-content: flex-end;
+        }
+        
+      } 
+    }
 
     .work-grid__study {
       grid-area: study;
       background: var(--work-grid__study-bg);
       color: var(--work-grid__study-txtcolor);
+
       h2 {
         color: var(--work-grid__study-title-color);
       }
       p:last-of-type {
         padding-bottom: 1rem;
       }
+    }
+
+    .work-grid__picthree {
+      grid-area: picthree;
     }
 
    .word-grid__img {
@@ -81,6 +102,8 @@
       grid-area: learning;
       background: var(--work-grid__learning-bg);
       color: var(--work-grid__learning-txtcolor);
+      padding: 1rem 2rem 2rem 0;
+
       h2 {
         color: var(--work-grid__learning-title-color);
       }

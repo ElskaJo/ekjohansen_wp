@@ -54,8 +54,11 @@
       grid-template-areas: 
       "intro intro intro sidebar sidebar"
       "highlight highlight highlight sidebar sidebar"
-      "skills skills study study study"
-      "learning learning learning more more";
+      "skills skills picone picone picone"
+      "skills skills skillstwo skillstwo skillstwo"
+      "pictwo pictwo pictwo study study"
+      "learning learning learning learning learning"
+      "more more picthree picthree picthree";
     }
 
     &.small-grid {

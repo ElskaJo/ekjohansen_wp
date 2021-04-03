@@ -13,13 +13,6 @@ a {
   }
 }
 
-// because I want the article a tags to have a different bg. and if I tack it on up there, there are more places to go fix that, than this would take. 
-article a,
-footer a {
-   //background: linear-gradient(to top, var(--link__bg) 25%, transparent 25%);
-   //background: var(--link__bg);
-}
-
 // first button: alrighty so in wordpress, this'll go on the p tag, to save me an absolute migraine. 
 .textlink__fullwidth  {
   margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
