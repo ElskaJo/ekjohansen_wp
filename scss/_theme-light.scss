@@ -86,6 +86,8 @@ $blue-whale: #0D3344;
     --generic__alt-blocks-bg-even: rgba(255,255,255,0.4);
     --generic__cover-bg: #afd6e9;
     --generic__cover-txt: #{$black};
+    // and for the overlapping text bit, over image. 
+    --generic__sidebyside-pbg: rgba(169,214,237, 0.8);
 
     // play category pages and matching post pages.
     --play__header-bg: rgba(255,255,255,0.4); //rgba(169,214,237, 0.3);

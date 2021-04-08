@@ -123,6 +123,8 @@ $buttermilk: #F6E2A6;
     --generic__alt-blocks-bg-even: rgba(255,255,255,0.2);
     --generic__cover-bg: #{$pearlescent-algae};
     --generic__cover-txt: #{$black};
+    // and for the overlapping text bit, over image. 
+    --generic__sidebyside-pbg: rgba(212,226,225,0.9);
      
     // category landing pages: all. 
     --category-landing__desc-bg: rgba(255,255,255,0.6);

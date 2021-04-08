@@ -26,14 +26,12 @@ get_header(); ?>
                 while ( $arr_posts->have_posts() ) :
                     $arr_posts->the_post();
                     ?>
-                    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                        <a href="<?php the_permalink(); ?>">
+                    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>                       
                             <?php
                             if ( has_post_thumbnail() ) :
                                 the_post_thumbnail();
                             endif;
                             ?>
-                        </a>
                         <header class="home-grid__retro--subtitle">
                         <a href="<?php the_permalink(); ?>">
                             <h3><?php the_title(); ?></h3>

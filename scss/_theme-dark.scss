@@ -89,6 +89,8 @@ $darkest-grey: #202020;
     --generic__alt-blocks-bg-even: rgba(255,255,255,0.01);
     --generic__cover-bg: #{$dark-cave};
     --generic__cover-txt: #{$olivine};
+    // and for the overlapping text bit, over image. 
+    --generic__sidebyside-pbg: rgba(0,0,0,0.8);
 
     // category landing pages: all. 
     --category-landing__desc-bg: rgba(255,255,255,0.06);
