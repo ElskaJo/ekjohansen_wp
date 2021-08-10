@@ -1,0 +1,36 @@
+@use '../0-Abstracts/variables' as *;
+
+main ul {
+ // padding: 1rem 1rem 1rem 2.5rem;
+  padding: 0 1rem 0 2.5rem; // testing in wp to see if the p tag will give it enough space. 
+  list-style-position: outside;
+
+  li {
+    margin-bottom: 1.2rem;
+    padding-inline-start: 1ch; // determines where the text should start
+  }
+}
+
+.global__bracket-list {
+   padding-top: 1rem;
+ 
+   li {
+     list-style-type: '{'; // backup for browsers that don't support marker
+ 
+     &::marker {
+         content: '{';
+         color: var(--list__brace);
+         
+     }
+   }
+ }
+
+   // changing a bit for this list. 
+   .global__indented-list {
+      list-style-type: '+'; // backup for browsers that don't support marker
+  
+      &::marker {
+        content: '+';
+        color: inherit;   
+      }
+    }

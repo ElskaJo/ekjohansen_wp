@@ -1,14 +1,7 @@
 // light theme. which i should know by the name, but ya know, some mornings do not start with enough coffee. 
 
-$allports: #216381;
-$pattens-blue: #CFF0FF;
-$dusty-robin: #185A79;
-$astronaut-blue: #1f4a5e;
-$alice-blue: #e6f2f8;
-$whisper: #eceaea;
-$french-pass: #a2cce0;
-$orient: #175572;
-$blue-whale: #0D3344;
+@use '../0-Abstracts/variables' as *;
+
 
 .light {
 

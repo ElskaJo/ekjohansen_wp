@@ -1,0 +1,107 @@
+@use '../0-Abstracts/variables' as *;
+@use '../0-Abstracts/mixins' as *;
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   font-family: 'Advent Pro', sans-serif;
+   background: var(--header__bg-mobile);
+ 
+   @media screen and (min-width:769px) {
+     background: var(--header__bg);
+     justify-content: flex-start;
+     padding: 0;
+   }
+ }
+ 
+ // setting up the logo h1.
+ .header__logo {
+   text-transform: uppercase;
+   font-weight: 200;
+   font-size: 2.5rem;
+   line-height: 1; 
+   align-items: stretch;
+ 
+   @media screen and (min-width: 769px) {
+     background: var(--header__logo-bg);
+   }
+   
+ 
+   a {
+     color: var(--header__logo-a);
+     font-weight: 400; // undoes the default a tag.
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     text-decoration:none;
+     padding: 0.5rem 1rem;
+    // background: transparent;
+     
+ 
+     // coloring the initials.
+     .header__logo--initials {
+       color: var(--header__logo-initials); // as we're swapping colors below, only 2 variables are being used.
+       transition: 0.5s color;
+ 
+     }
+ 
+     @include hover() {
+      color: var(--header__logo-initials);
+      background: var(--header__logo-bg--hover);
+ 
+       // so the span changes color when the entire a-tag is hovered.
+       .header__logo--initials {
+         color: var(--header__logo-a);
+       }
+     }
+ 
+     // and the j. 
+     .header__logo-j {
+       font-size: 3.5rem;
+       text-decoration: none;
+ 
+       @include hover() {
+         color: var(--header__logo-initials);
+ 
+       }
+     }
+     // hiding all but initials on mobile. the 1px difference means ipads with the space, will show the full name
+     .header__logo-mobilehide {
+       display: none;
+ 
+       @media screen and (min-width: 768px) {
+         display: block;
+       }
+     }
+   }
+ }
+ 
+ // as this houses the little theme swapper. 
+ .header__theme-swapper {
+   position: absolute;
+   z-index: 2; // so our links are clickable
+   right: 0;
+   top: 72px; // height of the nav on mobile and desktop
+   background: var(--theme-swapper__bg);
+   font-family: 'Advent Pro', sans-serif;
+   padding: 0.5rem;
+   box-shadow: 0 0 2px var(--theme-swapper__shadow);
+ 
+   @media screen and (min-width: 800px) {  
+       top: 48px; // makes it overlap the header just a touch
+   }
+ 
+   a {
+     padding: 0 0.5rem;
+ 
+     @include hover {
+       color: var(--theme-swapper__txt-link--focus);
+       font-weight: normal;
+     }
+   }
+ }
+ 
+ 
+ 

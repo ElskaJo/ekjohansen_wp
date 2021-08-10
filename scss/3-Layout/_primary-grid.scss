@@ -1,0 +1,71 @@
+
+// the grid from which all the different pages will pull. 
+// pages that use this: home, about,
+.primary-grid {
+   position: relative;
+ 
+    // trying to make all nested divs within this, flex. 
+    div {
+      display: flex;
+      flex-direction: column;
+      flex: 1; // stretches the interior div, so that the buttons are correctly pushed to the bottom edge of the container. this is like heart surgery sometimes.
+    }
+ 
+    > div:first-of-type {
+     @media screen and (max-width: 799px) {
+       padding-top: 2.5rem;
+     }
+    }
+ 
+     // and changing it for titles in the grid
+     h2, h1 {
+       padding: 2.5rem 2rem 1rem;
+     }
+ 
+     p:last-of-type {
+         padding: 1.5rem 2.5rem 2.5rem;
+ 
+         &.textlink__fullwidth {
+           padding: 0; // we let the a do all the padding
+         }
+     }
+  
+   // only on larger screens
+   @media screen and (min-width: 800px) {
+     display: grid; 
+     grid-template-columns: repeat(5, 1fr); 
+     grid-template-rows: auto; 
+     
+     &.home-grid {
+       grid-template-areas: 
+       "about about intro intro intro"
+       "about about work work play"
+       "retro retro retro retro retro"
+       "learning learning learning skills skills";
+     }
+ 
+     // &.about-grid {
+     //   grid-template-areas: 
+     //   "intro intro intro sidebar sidebar"
+     //   "progress1 progress1 progress1 progress1 progress1"
+     //   "progress2 progress2 progress3 progress3 progress3";
+     // }
+ 
+     &.work-grid {
+       grid-template-areas: 
+       "intro intro intro sidebar sidebar"
+       "highlight highlight highlight sidebar sidebar"
+       "skills skills picone picone picone"
+       "skills skills skillstwo skillstwo skillstwo"
+       "pictwo pictwo pictwo study study"
+       "learning learning learning learning learning"
+       "more more picthree picthree picthree";
+     }
+ 
+     &.small-grid {
+       grid-template-areas: 
+       "left-block left-block right-block right-block right-block"
+       "left-block left-block right-b-block right-b-block right-b-block";
+     }
+   }
+ }

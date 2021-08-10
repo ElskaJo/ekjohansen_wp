@@ -1,0 +1,62 @@
+
+@use '../0-Abstracts/variables' as *;
+// for each retro post.
+
+.single-post article.category-retro {
+
+   // the bit that holds the image of said tragic former design. 
+   header {
+       background: var(--retro__header-bg);
+       color: var(--retro__title-color);         
+   }
+
+   p {
+ 
+       &:nth-of-type(odd) { 
+         grid-column: 2 / 5;
+         background: linear-gradient(to right, var(--retro__paragraph-bg), transparent);
+         
+       }
+       &:nth-of-type(even) { 
+         grid-column: 2 / 5;
+         background: linear-gradient(to left, var(--retro__paragraph-bg), transparent);
+       }
+       &:first-of-type {
+           @media screen and (min-width: 768px) {
+             margin-top: -1rem;  
+           }
+           
+       }
+     }
+     
+   .post__bg {
+       background: var(--retro__post-bg);
+
+       @media screen and (min-width: 800px) {
+           display: grid; 
+           grid-template-columns: repeat(5, 1fr); 
+           grid-template-rows: auto;
+           grid-template-areas: 
+           "retro-img retro-img retro-img story story"
+           "retro-img retro-img retro-img highlights highlights";
+       }
+     }
+
+   .post__img {
+       grid-area: retro-img;
+   }
+
+       // the bit that holds the story about it. 
+   p.retro-story {
+       grid-area: story;
+       background: var(--retro__story-bg);
+   }
+
+   p.retro-highlights {
+       grid-area: highlights;
+       background: var(--retro__highlights-bg);
+   }
+   
+   
+
+} // ends category-retro article

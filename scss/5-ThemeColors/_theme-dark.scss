@@ -1,12 +1,7 @@
 // variables used below. useful if we need to change a colorin multiple places, without having to hunt around for it. rgbas are not included in this, as we don't run the risk of contrasting a warm with a cool color.
-$olivine: #a0c977;
-$columbia-blue: #97d7fc;
-$mouse-ears: #3b3b3b;
-$white-smoke: #f0efef;
-$late-day-sun: #e9c765;
-$dark-cave: #1b1b1b;
-$morning-glory: #92ccc8;
-$darkest-grey: #202020;
+@use '../0-Abstracts/variables' as *;
+
+
 
 // dark. ish.
 .dark {

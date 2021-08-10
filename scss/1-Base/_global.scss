@@ -1,0 +1,20 @@
+@use 'fonts' as *;
+@use '../0-Abstracts/variables' as *;
+
+html, body {
+   height: 100%; // required for sinking footer.
+ }
+ 
+ body {
+   font-size: 16px; // everything else should be rem
+   font-family: $body-font-family;
+   color: var(--body-txt);
+   line-height: 1.8;
+   display: flex; // required for sinking footer.
+   flex-direction: column; // required for sinking footer.
+   background: var(--body-bg-color);
+ }
+ 
+ main {
+   position: relative;
+ }

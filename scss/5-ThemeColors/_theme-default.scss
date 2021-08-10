@@ -1,14 +1,8 @@
 // the soft greenish theme
 // now, as default will always be a class on the body tag, we only need to move over variables that will actually be changed. a lot of these may not, initially. But I have a thing for color, I know I'll add at least one pink in the future. Gir's gotta be prepared.
+@use '../0-Abstracts/variables' as *;
 
-$black: #000000;
-$white: #ffffff;
 
-$pearlescent-algae: #91B4B2;
-$late-day-sun: #e9c765;
-$dark-smoke: #252525;
-$white-lake: #e2e7e7;
-$buttermilk: #F6E2A6;
 
 
 .default {

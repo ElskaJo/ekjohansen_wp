@@ -1,0 +1,15 @@
+// and for our work category single page. thing.
+@use '../0-Abstracts/variables' as *;
+
+.single-post article.category-work {
+
+    header {
+      background: var(--work__header-bg); // because we're changing the bg on the parent
+      color: var(--work__title-color);
+    }
+
+    .post__bg {
+      background: var(--work__post-bg);
+    }
+
+}

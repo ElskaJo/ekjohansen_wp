@@ -1,0 +1,125 @@
+// for the work page. Though it's different than the other categories. 
+.work-grid {
+
+   .work-grid__intro {
+     grid-area: intro;
+     background: var(--work-grid__intro-bg);
+     color: var(--work-grid__intro-txtcolor);
+
+     h2 {
+       color: var(--work-grid__intro-title-color);
+     }
+   }
+
+   .work-grid__highlight {
+     grid-area: highlight;
+     background: var(--work-grid__highlight-bg);
+     color: var(--work-grid__highlight-txtcolor);
+     div {
+       text-align: center;
+     }
+     h2 {
+       color: var(--work-grid__highlight-title-color);
+     }
+   }
+
+   .work-grid__sidebar {
+     grid-area: sidebar;
+     background: var(--work-grid__sidebar-bg);
+     color: var(--work-grid__sidebar-txtcolor);
+     h2 {
+       color: var(--work-grid__sidebar-title-color);
+     } 
+   }
+
+   .work-grid__picone {
+     grid-area: picone;
+     background: var(--work-grid__play-bg);
+     color: var(--work-grid__play-txtcolor);
+   }
+
+   .work-grid__skills {
+     grid-area: skills;
+     background: var(--work-grid__skills-bg);
+     color: var(--work-grid__skills-txtcolor);
+     h2 {
+       color: var(--work-grid__skills-title-color);
+     }
+   }
+   .work-grid__skillstwo {
+     grid-area: skillstwo;
+     padding: 1rem 1rem 1rem 0;
+   }
+
+   .work-grid__pictwo {
+     grid-area: pictwo;
+    div {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+       justify-content: center;
+
+       @media screen and (min-width:800px) {
+         justify-content: flex-end;
+       }
+       
+     } 
+   }
+
+   .work-grid__study {
+     grid-area: study;
+     background: var(--work-grid__study-bg);
+     color: var(--work-grid__study-txtcolor);
+     padding-bottom: 2rem; // as this has a list within
+
+     h2 {
+       color: var(--work-grid__study-title-color);
+     }
+     p:last-of-type {
+       padding-bottom: 1.5rem;
+     }
+   }
+
+   .work-grid__picthree {
+     grid-area: picthree;
+   }
+
+  .word-grid__img {
+    grid-area: work-img;
+  }
+
+   .work-grid__more {
+     grid-area: more;
+     justify-content: flex-end;
+     background: var(--work-grid__more-bg);
+     color: var(--work-grid__more-txtcolor);
+
+     p:first-of-type {
+       padding-top: 2rem; // to even it all out.
+     }
+   }
+
+   .work-grid__learning {
+     grid-area: learning;
+     background: var(--work-grid__learning-bg);
+     color: var(--work-grid__learning-txtcolor);
+     padding: 1rem 2rem 2rem 0;
+
+     h2 {
+       color: var(--work-grid__learning-title-color);
+     }
+     // one px larger than ipad pro. because the 3 columns look too cramped still
+     @media screen and (min-width: 1025px) {
+       ul {
+         display: flex;
+         justify-content: space-between;
+       }
+       li {
+         max-width: 31%;
+           &:nth-of-type(even) {
+           margin: 0 2rem;
+         }
+       }
+     }
+   }
+}

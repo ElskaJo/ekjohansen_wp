@@ -1,0 +1,33 @@
+@use '../0-Abstracts/variables' as *;
+
+// retro category landing page.
+body.category-retro {
+
+   .category__header {
+       background: var(--retro__header-bg);
+       color: var(--retro__title-color);
+   }
+
+   // now we can color the article's body, without affecting the opacity of the header.
+   .post__bg {
+       
+   }
+
+   // setting up the layout for the play category landing page.
+   .category__landing-blocks {
+       
+       article { 
+           
+           &:nth-of-type(4n + 1) { //technically here, it's the 5th box and the first, that span  1 - 3 columns.
+               background: var(--retro__post-blocks-bg-odd);
+           }
+           &:nth-of-type(4n) { // 4th box, span the opposite of the 1st.
+               
+               background: var(--retro__post-blocks-bg-even);
+           }
+           &:nth-of-type(5n + 2) {
+               background: var(--retro__post-blocks-bg-alt);
+           }
+       }
+   }
+}

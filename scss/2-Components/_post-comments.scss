@@ -1,0 +1,89 @@
+@use '../0-Abstracts/variables' as *;
+@use '../0-Abstracts/mixins' as *;
+
+// adding comments in here as single posts are where they're found. smart, huh?
+.post__comments {
+   background: var(--post-comments__bg);
+
+   section, .comment-respond {
+       max-width: 700px;
+       margin: 0 auto;
+       
+       //undoing what's universally done
+       p {
+           background: transparent;
+       }
+   }
+
+  .comments-title {
+      padding: 1rem;
+      @media screen and (min-width:800px) {
+          padding: 1rem 0;
+      }
+  }
+  ul {
+      padding: 0;
+
+      &.children {
+          padding-left: 1.5rem;
+          border-top: 1px solid  var(--post-comments__border);
+      }
+  }
+   li {
+      border-bottom: 3px solid var(--post-comments__border);
+      padding: 2rem 0 1rem;
+
+      @media screen and (max-width:768px) {
+       padding: 2rem 0 1rem;
+      }
+
+      & li {
+          border: 0;
+          padding-bottom: 0;
+      }
+
+      .comment-author, .comment-meta, .reply {
+           @media screen and (max-width:768px) {
+               padding: 0 1rem;
+           }
+      }
+
+
+   .reply a {
+           display: inline-block;
+           padding: 1rem;
+           margin: 0.5rem 0 2rem;
+           background: var(--textlink__btn-bg);
+           color: var(--textlink__widths-color);
+       }
+   
+  }
+
+  #reply-title, #commentform p {
+       padding: 1rem; 
+  }
+
+  textarea {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .form-submit input {
+       display: block;
+       text-align: center;
+       background: var(--textlink__btn-bg); // test this out as an accent color
+       @include edge-buffer;
+       color: var(--textlink__widths-color);
+       border: 0;
+       margin-bottom: 2rem;
+  }
+
+  .comment-form-comment label {
+       display: block;
+   }
+
+   #cancel-comment-reply-link {
+       padding: 1rem;
+       font-size: 0.9rem;
+   }
+}

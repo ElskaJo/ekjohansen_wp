@@ -1,0 +1,27 @@
+
+
+
+.category__landing,
+.post__single,
+.generic__alt-pg,
+.work__landing  {
+    header {
+        padding-top: 2rem;
+        @media screen and (min-width:800px) {
+            padding-top: 0; 
+        }
+       
+        h1 {
+            font-size: 3rem; 
+            padding: 2rem 1rem;
+            @media screen and (min-width: 800px) {
+                font-size: 4rem;
+                padding: 3rem 1.5rem;
+            }
+        }
+    }
+
+    .textlink__halfwidth {
+         margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
+    }
+}

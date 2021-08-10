@@ -1,0 +1,94 @@
+@use '../1-Base/fonts' as *;
+@use '../0-Abstracts/variables' as *;
+@use '../0-Abstracts/mixins' as *;
+
+
+// for buttons and links.
+
+a {
+   color: var(--link__color);
+   text-decoration-style: dotted;
+   text-decoration-color: var(--link__underline);
+   text-decoration-thickness: 0.1rem;
+ 
+   @include hover() {
+     text-decoration-style: solid;
+     background: var(--link__bg--focus);
+     color: var(--link__txt--focus);
+   }
+ }
+ 
+ // first button: alrighty so in wordpress, this'll go on the p tag, to save me an absolute migraine. 
+ .textlink__fullwidth  {
+   margin-top: auto; // pushes the button to the bottom of the container if the parent has flex on it. if not, this does nothing. 
+   padding: 0;
+   
+   a {   
+     background: var(--textlink__btn-bg);
+     display: block;
+     text-align: right;
+     font-weight: normal;
+     color: var(--textlink__widths-color);
+     @include edge-buffer;
+ 
+     @include hover {
+       background: var(--textlink__btn-bg--hover);
+       color: var(--textlink__widths-color--hover);
+     }
+   }
+ }
+ 
+ // and these by default are classes on the a tag, so we can put em side by side.
+ .textlink__halfwidth {
+   
+   a {
+     display: block;
+     text-align: center;
+     background: var(--textlink__btn-bg); // test this out as an accent color
+     @include edge-buffer;
+     color: var(--textlink__widths-color);
+     margin: 1rem 0; // so we have space on mobile
+ 
+     @media screen and (min-width: 768px) {
+       display: inline-block; // so we don't need a parent with flex
+       margin: 0;
+     }
+ 
+     &:nth-of-type(even) {
+       margin-left: 1rem;
+       margin-right: 1rem;
+     }
+ 
+     @include hover {
+       background: var(--textlink__btn-bg--hover);
+       color: var(--textlink__widths-color--hover);
+     }
+   }  
+ }
+ 
+ // for links that don't need to be fuckoff yellow. put on the p tag above the a, again for simplicity within gutenberg
+ .textlink__center-clear,
+ .textlink__right-clear {
+   margin-top: auto;
+   padding: 0;
+ 
+   a {
+     @include edge-buffer;
+     text-align: center;
+     font-weight: 700;
+     background: transparent;
+     display: block;
+ 
+     @include hover() {
+       background: var(--textlink__btn-bg--hover);
+       color: var(--textlink__widths-color--hover);
+     }
+   }
+ }
+ 
+ .textlink__right-clear a {
+   text-align: right;
+ }
+ 
+  
+ 

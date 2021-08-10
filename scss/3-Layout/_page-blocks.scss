@@ -1,0 +1,67 @@
+@use '../0-Abstracts/variables' as *;
+@use '../0-Abstracts/mixins' as *;
+
+// alright. for page layouts, starting with the generic one. 
+
+.generic__alt-pg {
+ 
+   header {
+     background: var(--generic__header-bg);
+     color: var(--generic__title-color);
+   }
+ 
+     p {
+       width: 100%; // so it actually reaches all 600px.
+       max-width: 700px;
+       margin: 0 auto;
+       @include edge-buffer;
+ 
+       &:last-of-type {
+         padding-bottom: 2rem; // this evens out between blockquotes and images
+       }
+     }
+ }
+
+ 
+// splits up the p's into a grid, technically. this way I can change layout and swap out colors if (oh let's be honest, that's a when) I want to shake things up
+.alt__content-blocks {
+   background: var(--generic__alt-blocks-bg);
+ 
+   @media screen and (min-width:800px) {
+     display: grid; 
+     grid-template-columns: repeat(7, 1fr);
+  }
+  
+  p, pre { 
+   
+      &:nth-of-type(odd) { 
+          grid-column: 2 / 6;
+          background: linear-gradient(to right, var(--generic__alt-blocks-bg-odd), transparent);
+          
+      }
+      &:nth-of-type(even) { 
+          grid-column: 3 / 7;
+          background: linear-gradient(to left, var(--generic__alt-blocks-bg-even), transparent);
+      }
+   }
+ 
+   > div {
+     grid-column: 2 / 7;
+ 
+     p {
+       max-width: 100%;
+     }
+   }
+ }
+ 
+ // for a possible generic flex layout -- used on the 404 page right now. 
+ .generic__missing-page {
+   display: flex;
+   flex: 1;
+ 
+   // grr. need to find out why the grid isn't filling up the flex box. 
+   article {
+     width: 100%;
+   }
+ }
+ 

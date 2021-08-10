@@ -1,0 +1,24 @@
+@use '../0-Abstracts/variables' as *;
+// on play category's single page. 
+
+.single-post article.category-play {
+  
+   header {
+     background: var(--play__header-bg); // because we're changing the bg on the parent
+     color: var(--play__title-color);
+   }
+
+   .post__bg {
+     background: var(--play__post-bg);
+   }
+
+   // so i can add an img as a cover, and not have the p's bg show
+   .wp-block-cover p {
+     background: transparent;
+   }
+
+   // we're going to add a border to in-post images i think. testing this out at least. 
+   figure img {
+     border: 10px solid var(--play__img-border);
+ }
+}

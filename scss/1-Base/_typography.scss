@@ -1,0 +1,51 @@
+
+@use 'fonts' as *;
+@use '../0-Abstracts/variables' as *;
+
+h1 {
+   font-size: 4rem;
+   line-height: 1;
+ }
+ 
+ h1, h2, h3, h4, h5 {
+   font-family: $title-font-family;
+   font-weight: 400;
+   letter-spacing: 1px;
+ }
+ 
+ h2,
+ .primary-grid h1 {
+   font-size: 3rem;
+   color: inherit; // testing this out, seeing if swapping out dark to light bg and text colors can be streamlined a bit.
+   text-shadow: 0 0 1px black;
+   line-height: 1;
+ }
+ 
+ h3 {
+   font-size: 2rem;
+   color: var(--h3-color);
+   font-weight: 400;
+ }
+ 
+ p, h2 {
+   padding: 1.5rem 2.5rem;
+ }
+ 
+ //except in the footer 
+ footer p {
+   padding: 0.5rem 0;
+ }
+ 
+ // used on the work page to highlight courses i've finished. 
+ .study-highlight {
+   background: var(--typography__text-highlight);
+ }
+
+ 
+b, strong {
+	font-weight: bolder;
+}
+
+small {
+	font-size: 80%;
+}

@@ -1,0 +1,121 @@
+@use '../0-Abstracts/variables' as *;
+@use '../0-Abstracts/mixins' as *;
+
+// classes naming the grid areas for home page
+
+
+.home-grid__about {
+   grid-area: about;
+   background: var(--home__about-bg);
+   
+   .wp-block-image {
+       margin: 0;
+   }
+ }
+ 
+ .home-grid__intro {
+     background: var(--home__intro-bg);
+     grid-area: intro;
+ 
+     h2 {
+         color: var(--home__intro-title-color);
+     }
+ }
+ 
+ .home-grid__work {
+     background: var(--home__work-bg);
+     grid-area: work;
+ 
+     h2 {
+         color: var(--home__work-title-color);
+     }
+ 
+ }
+ 
+ .home-grid__play {
+     background: var(--home__play-bg);
+     grid-area: play;
+ 
+     h2 {
+         color: var(--home__play-title-color);
+     }
+ }
+ 
+ .home-grid__retro {
+     background: var(--home__retro-bg);
+     grid-area: retro;
+     padding: 0;
+     flex-direction: row;
+ 
+     h2 {
+         padding: 2rem 2rem 1rem; // matches the other boxes' padding
+         color: var(--home__retro-title-color);
+     }
+ 
+ 
+     // the flex inside of the container 
+     .home-grid__retro--snippets {
+         display: flex;
+         align-items: stretch;
+         justify-content: space-between;
+         flex-direction: column; 
+     
+         @media screen and (min-width:600px) {
+             flex-direction: row;
+         }
+ 
+         > div {
+             flex: 1; // all the same width
+             margin-bottom: 2rem;
+             border: 1px dotted grey;
+                 
+             // ok, I've changed how I want the home page musing titles to read. Because of course I have. 
+                 
+             h3 {
+                 @include edge-buffer; 
+                 line-height: 1;
+             }
+       
+             // restyling the h2 and p 
+             p {
+                 padding: 1rem;
+             }
+ 
+             // until i can rejig the functions file to exclude this little guy: 
+             .more-link {
+                 display: none;
+             }
+ 
+             
+             .home-grid__retro--subtitle {
+                 background: transparent;
+ 
+                 a {
+                     display: block;
+                     width: 100%;
+                     background: var(--textlink__btn-bg); // making these colored by default.
+                     color: var(--textlink__widths-color);
+                     
+ 
+                     @include hover {
+                         background: var(--textlink__btn-bg--hover);
+                         color: var(--textlink__widths-color--hover);
+                       }
+                 }
+             }
+ 
+             @media screen and (min-width:600px) {
+                 margin: 0.5rem 0.5rem 4rem;               
+             }
+ 
+         }
+     }
+ }
+ 
+ // changing text colors on boxes that are darker. 
+ .home-grid__retro {
+     h2, p {
+         color: var(--home__retro-txt-color);
+     }
+ }
+ 

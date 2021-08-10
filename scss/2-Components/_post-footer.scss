@@ -1,0 +1,24 @@
+
+
+// for now. Need a prettier solution to this.
+.post__footer {
+   border-top: 0;
+   nav, .nav-links {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+       width: 100%;
+
+       @media screen and (min-width: 800px) {
+           flex-direction: row;
+       }
+
+       div {
+           margin: 1rem;
+           @media screen and (min-width: 800px) {
+               margin: 0 1rem;
+           }
+       }
+   }
+}

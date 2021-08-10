@@ -1,0 +1,55 @@
+@use '../0-Abstracts/mixins' as *;
+
+.category__landing {
+   .category__landing-blocks {
+       @media screen and (min-width:768px) {
+          display: grid; 
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: auto; 
+       }
+   }
+
+   article {
+       // to handle interior layout.
+       display: flex;
+       flex-direction: column;
+       
+       header {
+           background: transparent;
+           display: flex;
+           align-items: flex-end;
+
+           a {
+               background: transparent; // removing the emphasis underline from general text 
+
+               @include hover {
+                   color: inherit;
+               }
+           }
+       }
+
+       h2 {
+           padding: 1rem 2rem 0;
+           font-size: 2rem; 
+       }
+
+       // for the author and date bit 
+       .entry-meta {
+           font-size: 0.8rem;
+           display: flex;
+           justify-content: space-between;
+       }
+
+       // our pseudo button
+       .textlink__halfwidth {
+           width: 50%;
+           padding: 0;
+           align-self: flex-end; // right aligns item 
+           
+           a {
+               display: block; 
+               text-align: right;// so we take up the full width of the p
+           }
+       }
+   }
+}

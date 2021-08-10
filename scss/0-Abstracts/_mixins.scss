@@ -1,0 +1,43 @@
+// this will activate the hover state only for devices and browsers that support it. else it'll use the :active/focus states.
+@mixin hover() {
+   @media (hover: none) {
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     &:active,
+     &:focus,
+     &:focus-within {
+       outline: 2px solid var(--focus__outline-color);
+     }
+   }
+ 
+   @media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     &:hover {
+         @content;
+     }
+   }
+ }
+
+ @mixin focus {
+   &:focus, 
+   &:focus-within {
+     @content;
+   }
+ }
+ // example of how to include this.
+ // .element {
+ //   @include hover {
+ //      background: red;
+ //   }
+ // }
+ 
+ // not technically a mixin, but what the hell. 
+ @mixin edge-buffer {
+   padding: 1rem;
+ }
+ 
+ // for use on posts, mostly. 
+ @mixin max-width {
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+   padding: 2rem;
+ }
