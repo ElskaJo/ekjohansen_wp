@@ -18,8 +18,11 @@ footer {
     text-transform: capitalize;
   }
 
-  h3 {
-    padding-left: 1rem; // to get it inline with the menus.
+  h1, h2, h3, h4, h5 { // because wp is just shoving them all in there now
+    padding: 0 0 0 1rem; // to get it inline with the menus.
+    font-size: 1.5rem;
+    line-height: unset; //ffs man
+    text-shadow: none;
   }
 }
 
@@ -48,6 +51,7 @@ footer {
     display: flex;
     flex-direction: column;
     flex: 1;
+    list-style-type: none;
 
     @media screen and (min-width: 800px) {
       flex-direction: row;

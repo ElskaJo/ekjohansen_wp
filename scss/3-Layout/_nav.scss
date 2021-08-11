@@ -114,7 +114,7 @@ nav {
      
  
      &.is-active {
-       height: calc(100% - 95px);
+       height: calc(100% - 71px);
        overflow: scroll; // in case we end up with more stuffs.
        background: var(--nav__mobile-bg);
        align-items: stretch; // so the li and a span the width of the container

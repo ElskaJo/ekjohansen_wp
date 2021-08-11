@@ -31,7 +31,7 @@
      }
   
    // only on larger screens
-   @media screen and (min-width: 800px) {
+   @media screen and (min-width: 768px) {
      display: grid; 
      grid-template-columns: repeat(5, 1fr); 
      grid-template-rows: auto; 
@@ -39,7 +39,7 @@
      &.home-grid {
        grid-template-areas: 
        "about about intro intro intro"
-       "about about work work play"
+       "work work work play play"
        "retro retro retro retro retro"
        "learning learning learning skills skills";
      }
@@ -67,5 +67,15 @@
        "left-block left-block right-block right-block right-block"
        "left-block left-block right-b-block right-b-block right-b-block";
      }
+   }
+
+   @media screen and (min-width: 1150px) {
+      &.home-grid {
+         grid-template-areas: 
+         "about about intro intro intro"
+         "about about work work play"
+         "retro retro retro retro retro"
+         "learning learning learning skills skills";
+       }
    }
  }

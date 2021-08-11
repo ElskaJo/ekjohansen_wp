@@ -5,11 +5,18 @@
 
 
 .home-grid__about {
+   display: none !important; // it's a big image that does not belong on mobile.
+   @media screen and (min-width: 768px) {
+      display: flex !important;
+   }
    grid-area: about;
    background: var(--home__about-bg);
    
    .wp-block-image {
        margin: 0;
+   }
+   figure {
+      margin-top: auto; // pushes this to the bottom of the container
    }
  }
  

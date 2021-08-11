@@ -830,7 +830,7 @@ button#header__nav-toggle[aria-expanded=true] .header__nav-toggle--hamburger.lin
     background: var(--nav__mobile-bg);
   }
   .header__nav--container ul.is-active {
-    height: calc(100% - 95px);
+    height: calc(100% - 71px);
     overflow: scroll;
     background: var(--nav__mobile-bg);
     -webkit-box-align: stretch;
@@ -1061,20 +1061,25 @@ button#header__nav-toggle[aria-expanded=true] .header__nav-toggle--hamburger.lin
 .primary-grid p:last-of-type.textlink__fullwidth {
   padding: 0;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .primary-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
   }
   .primary-grid.home-grid {
-    grid-template-areas: "about about intro intro intro" "about about work work play" "retro retro retro retro retro" "learning learning learning skills skills";
+    grid-template-areas: "about about intro intro intro" "work work work play play" "retro retro retro retro retro" "learning learning learning skills skills";
   }
   .primary-grid.work-grid {
     grid-template-areas: "intro intro intro sidebar sidebar" "highlight highlight highlight sidebar sidebar" "skills skills picone picone picone" "skills skills skillstwo skillstwo skillstwo" "pictwo pictwo pictwo study study" "learning learning learning learning learning" "more more picthree picthree picthree";
   }
   .primary-grid.small-grid {
     grid-template-areas: "left-block left-block right-block right-block right-block" "left-block left-block right-b-block right-b-block right-b-block";
+  }
+}
+@media screen and (min-width: 1150px) {
+  .primary-grid.home-grid {
+    grid-template-areas: "about about intro intro intro" "about about work work play" "retro retro retro retro retro" "learning learning learning skills skills";
   }
 }
 
@@ -1127,8 +1132,11 @@ footer a {
   padding: 0.5rem;
   text-transform: capitalize;
 }
-footer h3 {
-  padding-left: 1rem;
+footer h1, footer h2, footer h3, footer h4, footer h5 {
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: unset;
+  text-shadow: none;
 }
 
 .footer__nav--container li {
@@ -1160,6 +1168,7 @@ footer h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  list-style-type: none;
 }
 @media screen and (min-width: 800px) {
   .footer__split-box ul {
@@ -1228,11 +1237,22 @@ body.category-work .category__landing-blocks article:nth-of-type(5n + 2) {
 }
 
 .home-grid__about {
+  display: none !important;
   grid-area: about;
   background: var(--home__about-bg);
 }
+@media screen and (min-width: 768px) {
+  .home-grid__about {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
 .home-grid__about .wp-block-image {
   margin: 0;
+}
+.home-grid__about figure {
+  margin-top: auto;
 }
 
 .home-grid__intro {
