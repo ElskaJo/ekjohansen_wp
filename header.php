@@ -44,7 +44,7 @@
 		  <!-- adding the theme swapper -->
 		<div class="header__theme-swapper">
 			Themes: <a id="dark" href="#">dark</a>  
-			<a href="#" id="light">light</a>
+			<a href="#" id="light">green</a>
 			<a href="#" id="default">reset</a>
 		</div>
 	</header>

@@ -13,7 +13,7 @@ get_header(); ?>
 
         <!-- adding the retro blog thingy. goddamn been writing code too long today -->
         <div class="home-grid__retro">
-            <h2>Recent Musing</h2>
+            <h2>Thoughts n Things</h2>
             <div class="home-grid__retro--snippets">
             <?php $args = array(
                 'post_type' => 'post',

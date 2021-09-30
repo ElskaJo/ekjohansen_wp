@@ -7,73 +7,73 @@
 
 .default {
 
-    --body-bg-color: #{$pearlescent-algae};
+    --body-bg-color: #afd6e9;
     --body-txt: #{$black};
 
     // header bg 
-    --header__bg-mobile: rgba(0,0,0,0.3);
-    --header__bg: rgba(255,255,255,0.7);
+    --header__bg-mobile: rgba(255,255,255,0.9);
+    --header__bg: rgba(255,255,255,0.9);
 
     // name/logo
-    --header__logo-a: #{$black}; 
-    --header__logo-initials: #{$white};
-    --header__logo-bg: rgba(255,255,255,0.4); // alt bg could be this creamier yellow: fde395
-    --header__logo-bg--hover: #{$late-day-sun};
+    --header__logo-a:rgb(43, 42, 42); 
+    --header__logo-initials: #{allports};
+    --header__logo-bg: #{$astronaut-blue}; // alt bg could be this creamier yellow: fde395
+    --header__logo-bg--hover: #{allports};
 
     // here we're going to change this on desktop, because the header's lighter. 
     @media screen and (min-width: 800px) {
-      --header__logo-initials: #{$dark-smoke};
+      --header__logo-initials: #{$white};
+      --header__logo-a: #{$pattens-blue};
     }
 
     // setting up all focus style. 
     --focus__outline-color: #{$black};
 
     // nav
-    --nav__a: #{$black};
+   --nav__a: #{$dusty-robin};
     --nav__a-underline: #{$black};
-    --nav__a-hover: inherit;
-    --nav__a-bg--hover: #{$late-day-sun};
+    --nav__a-hover: #{$white};
+    --nav__a-bg--hover: #{$allports};
 
     // mobile menu 
-    --nav__mobile-bg: #{$white-lake};
-    --nav__mobile-bg--active: #{$white-lake};
+    --nav__mobile-bg: #{$alice-blue};
+    --nav__mobile-bg--active: #{$whisper};
 
     // mobile button. 
-    --nav__mobile-button-bg: rgba(255,255,255,0.4); 
-    --nav__mobile-button--active: #{$white-lake};
-    --nav__mobile--button--focus: #{$white-lake};
-    --nav__mobile-button-link: #{$black};
+    --nav__mobile-button-bg: #{$alice-blue};
+    --nav__mobile-button--active: #{$alice-blue};
+    --nav__mobile--button--focus: #{$french-pass};
+    --nav__mobile-button-link: #{$orient};
     
     // for our little theme swapper : note that shadow values are in light
     --theme-swapper__bg: #{$white};
+    --theme-swapper__txt-link--focus: #{$white};
 
     // text links in body 
     --link__color: #{$black};
-    --link__bg: #{$late-day-sun};
+    --link__bg: #{$dusty-robin};
     --link__underline: inherit;
-    --link__bg--focus: #{$late-day-sun};
-    --link__txt--focus: inherit;
-
-    // for a word or phrase we want highlighted. 
-    --typography__text-highlight: #{$late-day-sun};
-
-    // for the faux buttons
-    --textlink__btn-bg: #{$late-day-sun};
-    --textlink__btn-bg--hover: #{$buttermilk};
-    --textlink__widths-color--hover: #{$black};
+    --link__bg--focus: #{$dusty-robin};
+    --link__txt--focus: #{$white};
+    
+    // when a text link mimics a button, and the faux buttons
+    --textlink__widths-color: #{$white};
+    --textlink__btn-bg: #{$dusty-robin};
+    --textlink__btn-bg--hover: #{$astronaut-blue};
+    --textlink__widths-color--hover: #{$white};
 
   // grids, used on the homepage, what i do and about pgs.
-    --home__intro-bg: rgba(255,255,255,0.2);
+    --home__intro-bg: rgba(255,255,255,0.5);
+    --home__about-bg: rgba(255,255,255,0.6);
     --home__intro-title-color: inherit;
-    --home__about-bg: rgba(255,255,255,0.5);
 
     --home__work-bg: rgba(255,255,255,0.8);
     --home__work-title-color: inherit;
 
-    --home__play-bg: rgba(255,255,255,0.4);
+    --home__play-bg: rgba(255,255,255,0.25);
     --home__play-title-color: inherit;
 
-    --home__retro-bg: rgba(255,255,255,0.2);
+    --home__retro-bg: rgba(255,255,255,0.4);
     --home__retro-title-color: inherit;
     --home__retro-txt-color: inherit;
 
@@ -81,7 +81,7 @@
     --work-grid__intro-txtcolor: inherit;
     --work-grid__intro-title-color: inherit;
 
-    --work-grid__highlight-bg: transparent;
+    --work-grid__highlight-bg: rgba(255,255,255,0.2);
     --work-grid__highlight-txtcolor: inherit;
     --work-grid__highlight-title-color: inherit;
 
@@ -94,35 +94,36 @@
     --work-grid__play-title-color: inherit;
 
     --work-grid__skills-bg: rgba(255,255,255,0.25);
-    --work-grid__skills-txtcolor: inherit;
+    --work-grid__skills-txtcolor: #{$black};
     --work-grid__skills-title-color: inherit;
-
-    
-    --work-grid__study-bg: rgba(255,255,255,0.4);
+ 
+    --work-grid__study-bg: rgba(255,255,255,0.5);
     --work-grid__study-txtcolor: inherit;
     --work-grid__study-title-color: inherit;
 
-    --work-grid__more-bg: rgba(255,255,255,0.6);
+    --work-grid__sidebar-bg: rgba(255,255,255,0.8);
+
+    --work-grid__more-bg: rgba(255,255,255,0.8);
     --work-grid__more-txtcolor: inherit;
 
-    --work-grid__learning-bg: rgba(255,255,255,0.2);
+    --work-grid__learning-bg: rgba(255,255,255,0.6);
     --work-grid__learning-txtcolor: inherit;
     --work-grid__learning-title-color: inherit; 
 
     // generic page settings
-    --generic__header-bg: rgba(255,255,255,0.2);
+    --generic__header-bg: rgba(255,255,255,0.4);
     --generic__title-color: inherit;
-    --generic__alt-blocks-bg: rgba(255,255,255,0.5);
-    --generic__alt-blocks-bg-odd: rgba(255,255,255,0.2);
-    --generic__alt-blocks-bg-even: rgba(255,255,255,0.2);
+    --generic__alt-blocks-bg: rgba(255,255,255,0.6);
+    --generic__alt-blocks-bg-odd: rgba(255,255,255,0.4);
+    --generic__alt-blocks-bg-even: rgba(255,255,255,0.4);
     --generic__cover-bg: #{$pearlescent-algae};
     --generic__cover-txt: #{$black};
     // and for the overlapping text bit, over image. 
-    --generic__sidebyside-pbg: rgba(212,226,225,0.9);
+    --generic__sidebyside-pbg: rgba(212,226,225,0.8);
      
     // category landing pages: all. 
-    --category-landing__desc-bg: rgba(255,255,255,0.6);
-    --category-landing__blocks-bg: rgba(255,255,255,0.6);
+   //  --category-landing__desc-bg: rgba(255,255,255,0.6);
+   //  --category-landing__blocks-bg: rgba(255,255,255,0.6);
 
     // play category pages and matching post pages.
     --play__header-bg: rgba(255,255,255,0.2);
@@ -132,46 +133,46 @@
     --play__post-blocks-bg-even: rgba(255,255,255,0.2);
     --play__post-blocks-bg-alt: rgba(255,255,255,0.2);
     --play__paragraph-bg: rgba(255,255,255,0.2);
-    --play__blockq-bg: rgba(255,255,255,0.2);
-    --play__img-border: rgba(255,255,255,0.2);
+    --play__blockq-bg: rgba(255,255,255,0.6);
+    --play__img-border: rgba(255,255,255,0.4);
 
     // retro category pages and matching post pages. 
     --retro__header-bg: rgba(255,255,255,0.4);
     --retro__title-color: inherit;
-    --retro__post-bg: rgba(255,255,255,0.4);
+    --retro__post-bg: rgba(255,255,255,0.2);
     --retro__post-blocks-bg-odd: rgba(255,255,255,0.5);
     --retro__post-blocks-bg-even: rgba(255,255,255,0.2);
     --retro__post-blocks-bg-alt: rgba(255,255,255,0.2);
-    --retro__story-bg: rgba(255,255,255,0.4);
+    --retro__story-bg: rgba(255,255,255,0.6);
     --retro__highlights-bg: rgba(255,255,255,0.6);
     --retro__paragraph-bg: rgba(255,255,255,0.2);
 
     // work category pages and matching post pages. 
-    --work__header-bg: rgba(255,255,255,0.6);
+    --work__header-bg: rgba(255,255,255,0.4);
     --work__title-color: inherit;
-    --work__post-bg: rgba(255,255,255,0.3);
+    --work__post-bg: rgba(255,255,255,0.7);
     --work__post-blocks-bg-odd: rgba(255,255,255,0.5);
     --work__post-blocks-bg-even: rgba(255,255,255,0.2);
     --work__post-blocks-bg-alt: rgba(255,255,255,0.2);
 
     // post generic elements
-    --post__single-subtitle--bg: rgba(145,180,178,0.8);
+    --post__single-subtitle--bg: rgba(33, 116, 155, 0.25);
 
     // post comments
-    --post-comments__border: rgba(255,255,255,0.2);
+    --post-comments__border: rgba(169,214,237, 0.6);
+    --post-comments__bg: rgba(255,255,255,0.6);
 
     // WP default re-writes. 
     --wp-adjust__bluish-cover-bg: rgba(255, 255, 255, 0.4);
     --wp-adjust__bluish-cover-txt: black;
 
     // footer colors. 
-    --footer__top-border: rgba(0,0,0,0.1);
-    --footer__block-bg-odd: rgba(255,255,255,0.4);
+    --footer__top-border: rgba(33, 116, 155, 0.35);
+    --footer__block-bg-odd: rgba(255,255,255,0.25);
     --footer__block-txt-odd: inherit;
-    --footer__block-bg-even: rgba(255,255,255,0.2);
+    --footer__block-bg-even: rgba(255,255,255,0.6);
     --footer__block-txt-odd: inherit;
 
-    // list bullets because holy god i can style these now
-    --list__brace: #{$black};
-
+  // list bullets because holy god i can style these now
+  --list__brace: #{$blue-whale};
 }
